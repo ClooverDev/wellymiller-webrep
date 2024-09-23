@@ -1,0 +1,219 @@
+<!DOCTYPE=html>
+
+<html>
+
+<head>
+
+	<title> Welly Miller </title>
+	
+	<link rel="icon" type="image/x-icon" href="icon.ico">
+	<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
+	
+	<style>
+	
+		@import url('https://fonts.cdnfonts.com/css/alvifont');
+		@import url('https://fonts.cdnfonts.com/css/morning-coffee');
+
+		
+		* {
+			color: white;
+			font-family: 'Alvifont', sans-serif;
+			z-index: 1;
+		}
+		
+		#_t {
+			text-align: center;
+			font-size: 5rem;
+		}
+		
+		#_dc {
+			text-align: center;
+			font-size: 2rem;
+		}
+		
+		.classes_propaganda img {
+			width: 250px;
+			height: 425px;
+			animation: an_rotate 2s ease alternate infinite;
+			z-index: 0;
+		}
+		
+		@keyframes an_rotate {
+			0% { 
+				transform: translate(800px, -50px) rotate(-4deg);
+			}
+			
+			100% {
+				transform: translate(800px, -50px) rotate(4deg);
+			}
+		}
+		
+		.web_bg {
+			background-image: url("resources/background_2.png");
+			background-repeat: repeat;
+			background-position: top left;
+			width: 1280vw;
+			height: 5000px;
+			background-attachment: fixed;
+			position: fixed;
+			z-index: 0;
+			opacity: 0.5;
+			filter: blur(5px);
+		}
+		
+		.classes_novolivro_resumo {
+			transform: translateY(120px);
+		}
+		
+		.classes_novolivro_resumo img {
+			width: 190px;
+			height: 280px;
+			animation: 3s ease alternate infinite newBookCC;
+		}
+		
+		@keyframes newBookCC {
+			from {
+				transform: translate(430px, -320px);
+				border: 2px solid white;
+			}
+			
+			to {
+				transform: translate(430px, -340px);
+				filter: blur(0.8px);
+				border: 2px solid yellow;
+			}
+		}
+		
+		.divider_bar img {
+			width: 100%;
+		}
+		
+		.classes_biografia {
+			transform: translateY(120px);
+		}
+		
+		.classes_biografia img {
+			transform: translate(667px, -60px);
+			width: 480px;
+			height: 425px;
+		}
+		
+		#hover_book_eff {
+			opacity: 0;
+			filter: blur(5px) brightness(100) contrast(0%);
+			z-index: 0;
+			position: absolute;
+			width: 250px;
+			height: 425px;
+			animation: an_rotate_hover 2s ease alternate infinite;
+			z-index: 0;
+			transition: 1s ease;
+		}
+		
+		@keyframes an_rotate_hover {
+			0% { 
+				transform: translate(800px, -45px) rotate(-4deg);
+			}
+			
+			100% {
+				transform: translate(800px, -45px) rotate(4deg);
+			}
+		}
+		
+		#book_propaganda {
+			position: absolute;
+			z-index: 1;
+		}
+		
+		#book_propaganda:hover~#hover_book_eff {
+			filter: blur(150px);
+			opacity: 1;
+		}
+		
+		#book_secret {
+			width: 250px;
+			height: 425px;
+			animation: an_rotate_sct 2s ease alternate infinite;
+			z-index: 0;
+		}
+		
+		@keyframes an_rotate_sct {
+			0% { 
+				transform: rotate(-4deg);
+			}
+			
+			100% {
+				transform: rotate(4deg);
+			}
+		}
+		
+	
+	</style>
+	
+
+</head>
+
+<body bgColor="black">
+
+	<div id="web_bg_id" class="web_bg"> </div>
+
+	<div class="classes_propaganda" style="width: 98vw; height: 610px;">
+	
+		<h1 id="_t" style="transform:translateY(20px)"> A Quarta Parede </h1>
+		<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; transform:translateY(-50px); color: lightgray"> Um livro de poesia por Welly Miller </p>
+		
+		
+		<div style="position: absolute; transform:translate(550px, 0) scale(0.6);"><img id="book_secret" src="resources/capas/secret_3d.png"></img></div>
+		<div style="position: absolute; transform:translate(1050px, 0) scale(0.6);"><img id="book_secret" src="resources/capas/secret_3d.png"></img></div>
+		
+		<img id="book_propaganda" src="resources/capas/a_quarta_parede_3d.png"></img>
+		<img id="hover_book_eff" src="resources/capas/a_quarta_parede_3d.png"></img>
+	
+	</div>
+	
+	
+	<div class="classes_novolivro_resumo" style="width: 98vw; height: 410px;">
+	
+		<h1 id="_t" style="font-size:2rem;"> Entre palavras, entre poesias </h1>
+		<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; font-size:1.5rem; transform:translateY(-25px); color: lightgray"> Você encontra um mar de frases e poesias.	 </p>
+		
+		<div style="width: 35%; transform: translate(650px, -15px)"> 
+			<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; font-size:1.6rem; color: white; text-align: left; "> Um livro de palavras fortes, sentimentos fortes e emoções fortes. A única fraqueza é que termina e continua em outra história.
+Poemas, frases que você se identifica. Tivemos histórias parecidas, mas com começos diferentes. Mas este é o meu próprio caminho baseado nesse livro. </p>
+		</div>
+
+		<img style="filter: blur(2px); z-index: 1; border-radius: 15px; position: fixed;" src="resources/capas/a_quarta_parede_front.png"> </img>
+		<img style="border-radius: 15px; position: fixed;" src="resources/capas/a_quarta_parede_front.png"> </img>
+	
+	</div>
+	
+	<div class="divider_bar" style="transform:translateY(120px)"><img src="resources/divider.png"> </img></div>
+	
+	<div class="classes_biografia" style="width: 98vw; height: 960px;">
+	
+		<p id="_dc" style="transform:translateY(-5px); color: white"> QUEM SOU EU </p>
+		
+		<img src="resources/foto.png"> </img>
+		
+		<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; transform:translateY(-100px); color: yellow"> Isabelly Rodrigues </p>
+		
+		<div style="transform: translate(590px, -112px); width: 35%; height: 52%">
+			<p id="_dc" style="transform: translateY(-15px); font-family: 'Morning Coffee', sans-serif; font-size: 1.3rem; color: white"> Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! </p>
+			<p id="_dc" style="transform: translateY(-25px); font-family: 'Morning Coffee', sans-serif; font-size: 1.3rem; color: lightgray"> Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </p>
+		</div>
+	
+	</div>
+
+</body>
+
+<script type="text/javascript">
+
+	var back = document.getElementById("web_bg_id");
+	window.addEventListener("scroll", function() {
+		back.style.backgroundPosition = +window.pageYOffset+"px";
+	})
+
+</script>
+
+</html>
