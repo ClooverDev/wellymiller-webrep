@@ -1,4 +1,4 @@
-<!DOCTYPE=html>
+<!DOCTYPE html>
 
 <html>
 
@@ -6,253 +6,396 @@
 
 	<title> Welly Miller </title>
 	
-	<link rel="icon" type="image/x-icon" href="web_icon.ico">
-	<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="web_icon_2.ico">
+	<link href="https://fonts.cdnfonts.com/css/i-imbang" rel="stylesheet">
 	<link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
 	
 	<style>
-	
-		@import url('https://fonts.cdnfonts.com/css/alvifont');
-		@import url('https://fonts.cdnfonts.com/css/morning-coffee');
-
-		
-		* {
-			color: white;
-			font-family: 'Alvifont', sans-serif;
-			z-index: 2;
-			position: relative;
-		}
-		
-		#_t {
-			width: 800px;
-			text-align: center;
-			font-size: 70px;
-		}
-		
-		#_dc {
-			text-align: center;
-			width: 800px;
-			font-size: 30px;
-		}
-		
-		.classes_propaganda img {
-			width: 250px;
-			height: 425px;
-			animation: an_rotate 2s ease alternate infinite;
-			z-index: 0;
-		}
-		
-		@keyframes an_rotate {
-			0% { 
-				transform: translate(535px, -50px) rotate(-4deg);
-			}
+		body {
+			display: flex;
 			
-			100% {
-				transform: translate(535px, -50px) rotate(4deg);
-			}
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			
 		}
 		
-		.web_bg {
+		.web_title {
+			width: 100%;
+			height: 100px;
+			display: flex;
+			overflow: hidden;
+			background: linear-gradient(to bottom, rgba(99, 131, 161, 0.35) 0%, rgba(99, 131, 161, 0) 100%);
+			margin-top: -5px;
+			
+			align-content: center;
+			justify-content: center;
+		}
+		
+		.web_title h4 {
+			width: 100%;
+			height: 100%;
+			font-size: 30px;
+			text-align: center;
+			text-decoration: underline;
+			text-shadow: 0 0 5px black;
+		}
+	
+		#web_bg_id {
 			background-image: url("resources/background_2.png");
 			background-repeat: repeat;
 			background-position: top left;
+			background-size: cover;
 			width: 1280vw;
 			height: 5000px;
 			background-attachment: fixed;
 			position: fixed;
-			z-index: 0;
-			opacity: 0.9;
+			opacity: 0.8;
 			filter: blur(5px);
-		}
-		
-		#newbook_clr {
-			width: 190px;
-			height: 280px;
-			animation: 3s ease alternate infinite newBookCC;
-		}
-		
-		#newbook_pb {
-			width: 190px;
-			height: 280px;
-			animation: 3s ease alternate infinite newBookCC_pb;
-		}
-		
-		@keyframes newBookCC {
-			from {
-				transform: translate(-220px, -320px);
-				border: 2px solid white;
-			}
+			overflow: hidden;
 			
-			to {
-				transform: translate(-220px, -325px);
-				filter: blur(0.8px);
-				border: 2px solid yellow;
-			}
+			margin-left: -8px;
+			margin-top: -8px;
+		}
+	
+		* {
+			font-family: 'Alvifont', sans-serif;
+			color: white;
+			z-index: 0;
 		}
 		
-		@keyframes newBookCC_pb {
-			from {
-				transform: translate(-220px, -320px);
-				border: 2px solid white;
-			}
+		#book_ad {
+			width: 100%;
 			
-			to {
-				transform: translate(-220px, -325px);
-				filter: blur(0.8px) saturate(0);
-				border: 2px solid gray;
-			}
+			display: flex;
+			
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
 		}
 		
-		.divider_bar img {
+		#book_ad h4 {
+			text-align: center;
+			font-size: 30px;
+		}
+		
+		#books {
+			width: 100%;
+			
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		#book_group {
+			width: 40%;
+			
+			margin-left: -120px;
+			margin-right: -120px;
+			
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		#book_group img {
+			width: 35%;
+			margin-right: -100px;
+		}
+		
+		#buy_group {
+			width: 400px;
+			height: 320px;
+			
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		
+		#buy_group img {
+			width: 60%;
+		}
+		
+		#buy_col {
+			position: relative;
+		
+			border: 2px inset white;
+			
+			width: 60%;
+			height: 20px;
+			
+			border-radius: 25px;
+			
+			background-color: black;
+			
+			margin-top: 10px;
+			
+			z-index: 2;
+			
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			
+			transition: 0.25s ease;
+		}
+		
+		#buy_col h4 {
+			width: 100%;
+			height: 100%;
+			font-size: 100%;
+			
+			text-align: center;
+			
+			font-family: 'Morning Coffee', sans-serif;
+			
+		}
+		
+		#buy_pb {
+			position: relative;
+		
+			border: 2px inset white;
+			
+			width: 60%;
+			height: 20px;
+			
+			border-radius: 25px;
+			
+			background-color: black;
+			
+			margin-top: 10px;
+			
+			z-index: 2;
+			
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			
+			transition: 0.25s ease;
+		}
+		
+		#buy_pb h4 {
+			width: 100%;
+			height: 100%;
+			font-size: 100%;
+			
+			text-align: center;
+			
+			font-family: 'Morning Coffee', sans-serif;
+			
+		}
+		
+		#buy_col:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+		
+		#buy_pb:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+		
+		#buy_col:active { background-color: white; cursor: default }
+		#buy_pb:active { background-color: white; cursor: default }
+		
+		.big_light {
+			margin-top: -250px;
+			margin-bottom: -250px;
+			width: 100%;
+			opacity: 0.75;
+			filter: blur(25px);
+			z-index: -1;
+		}
+		
+		.big_light img {
+			width: 100%;
+			height: 550px;
+		}
+		
+		.title {
+			width: 800px;
+			height: 100px;
+		
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			
+			border: 6px inset #a1bade;
+			border-radius: 25px;
+			
+			background-color: rgba(161, 186, 222, 0.25);
+			
+		}
+		
+		.title h4 {
+			transform: translateY(20px);
+			margin-top: -25px;
+			width: 100%;
+			height: 30px;
+			font-size: 30px;
+			text-align: center;
+			text-shadow: 0 0 4px black;
+		}
+		
+		.desc {
+			width: 800px;
+			height: 100px;
+			
+			margin-top: 40px;
+		
+			display: flex;
+			align-content: center;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			
+		}
+		
+		.desc h4 {
+			width: 100%;
+			font-family: 'Morning Coffee', sans-serif;
+			font-size: 25px;
+			text-align: center;
+		}
+		
+		.flower_divisor {
+			margin-top: 40px;
 			width: 100%;
 		}
 		
-		.classes_biografia {
-			transform: translateY(80px);
+		.flower_divisor img {
+			width: 100%;
+			height: 100%;
 		}
 		
-		.classes_biografia img {
-			transform: translate(667px, -60px);
-			width: 480px;
-			height: 425px;
-		}
-		
-		#hover_book_eff {
-			opacity: 0;
-			filter: blur(5px) brightness(100) contrast(0%);
-			z-index: 0;
-			position: absolute;
-			width: 250px;
-			height: 425px;
-			animation: an_rotate_hover 2s ease alternate infinite;
-			z-index: 0;
-			transition: 1s ease;
-		}
-		
-		@keyframes an_rotate_hover {
-			0% { 
-				transform: translate(535px, -45px) rotate(-4deg);
-			}
+		.biography {
+			width: 100%;
+			height: 600px;
 			
-			100% {
-				transform: translate(535px, -45px) rotate(4deg);
-			}
+			display: flex;
+			align-content: center;
+			justify-content: center;
 		}
 		
-		#book_propaganda {
-			position: absolute;
-			z-index: 1;
-		}
-		
-		#book_propaganda:hover~#hover_book_eff {
-			filter: blur(150px);
-			opacity: 1;
-		}
-		
-		#book_secret {
-			width: 250px;
-			height: 425px;
-			animation: an_rotate_sct 2s ease alternate infinite;
-			z-index: 0;
-		}
-		
-		@keyframes an_rotate_sct {
-			0% { 
-				transform: rotate(-4deg);
-			}
-			
-			100% {
-				transform: rotate(4deg);
-			}
-		}
-		
-		.bright_divider {
-			z-index: 1;
-			background-image: url('resources/bright_divider_2.png');
+		.inner_bio {
+			background-image: url("resources/black paper.png");
 			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			background-position: center;
+			background-position: 50% 50%;
+			width: 800px;
+			height: 650px;
+			
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
-	
+		
 	</style>
 	
-
 </head>
 
 <body bgColor="black">
+	<div style="z-index: -1;" id="web_bg_id"></div>
 
-	<div id="web_bg_id" class="web_bg" style="z-index: 0;"> </div>
-
-	<div class="classes_propaganda" style="transform: translateX(230px); width: 73vw; height: 690px;">
+	<div id="book_ad" class="dev">
 	
-		<h1 id="_t" style="transform:translate(32%, 20px)"> A Quarta Parede </h1>
-		<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; transform:translate(32%, -50px); color: lightgray"> Um livro de poesia por Welly Miller </p>
-		
-		
-		<div style="position: absolute; transform:translate(280px, 0) scale(0.6);"><img id="book_secret" src="resources/capas/secret_3d.png"></img></div>
-		<div style="position: absolute; transform:translate(780px, 0) scale(0.6);"><img id="book_secret" src="resources/capas/secret_3d.png"></img></div>
-		
-		<img id="book_propaganda" src="resources/capas/a_quarta_parede_3d.png"></img>
-		<img id="hover_book_eff" src="resources/capas/a_quarta_parede_3d.png"></img>
-	
-	</div>
-	
-	<div class="bright_divider" style="width: 1850px; height: 900px; transform:translate(0px, -550px); position: absolute; filter: blur(45px); opacity: 0.8;"></div>
-	
-	<div class="classes_novolivro_resumo" style="z-index: 1; width: 1100px; height: 470px; transform: translate(350px, -10px);">
-	
-		<div style="border-radius: 25px; border: 6px inset #a1bade; height:25%; transform: translate(210px, -25px); width: 60%;">
-			<h1 id="_t" style="font-size:2rem; transform: translateX(-70px); text-shadow: 0px 0px 5px black"> Entre palavras, entre poesias </h1>
-			<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; font-size:1.5rem; transform:translate(-71px, -25px); color: #ebebeb; text-shadow: 0px 0px 8px black"> Você encontra um mar de frases e poesias.	 </p>
+		<div class="web_title">
+			<h4> Livros da Welly </h4>
 		</div>
-			
-		<div style="width: 100%; transform: translate(-5px, -15px)"> 
-			<p id="_dc" style="font-family: 'Morning Coffee', sans-serif; font-size:25px; color: white; text-align: center; width: 650px; transform: translate(226px, 25px)"> Um livro de palavras fortes, sentimentos fortes e emoções fortes. A única fraqueza é que termina e continua em outra história.
-Poemas, frases que você se identifica. Tivemos histórias parecidas, mas com começos diferentes. Mas este é o meu próprio caminho baseado nesse livro. </p>
-			
-			<div style="transform: translate(250px, 25px); position: absolute;">
-				<p style="transform:translate(-170px, 10px); text-align:center; width:100px;"> Colorido </p>
-				<img id="newbook_clr" style="filter: blur(2px); z-index: 1; border-radius: 15px; position: fixed;" src="resources/capas/a_quarta_parede_front.png"> </img>
-				<img id="newbook_clr" style="border-radius: 15px; position: fixed;" src="resources/capas/a_quarta_parede_front.png"> </img>
+		
+		<div id="books">
+			<div id="buy_group" style="margin-right: -50px;">
+				<img src="resources/logos/aqp.png">
+				
+				<div id="buy_col">
+					<h4 onclick="open_link_AQP_COL();"> COLORIDO </h4>
+				</div>
+				
+				<div id="buy_pb">
+					<h4 onclick="open_link_AQP_PB();"> PRETO & BRANCO </h4>
+				</div>
+			</div>
+		
+			<div id="book_group">
+				<img src="resources/capas/a_quarta_parede_3d_pb.png">
+				<img style="transform: translateY(25px);" src="resources/capas/a_quarta_parede_3d.png">
 			</div>
 			
-			<div style="transform:translate(1100px,26px); position: absolute;">
-				<p style="transform:translate(-190px, 10px); text-align:center; width:100%;"> Preto & Branco </p>
-				<img id="newbook_pb" style="filter: blur(2px); z-index: 1; border-radius: 15px; position: fixed;" src="resources/capas/a_quarta_parede_front.png"> </img>
-				<img id="newbook_pb" style="border-radius: 15px; position: fixed; filter: saturate(0)" src="resources/capas/a_quarta_parede_front.png"> </img>
+			<div id="book_group" style="transform: translateX(-30px)">
+				<img src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
+				<img style="transform: translateY(30px);" src="resources/capas/a_dimensao_do_vidro_3d.png">
+			</div>
+			
+			<div id="buy_group">
+				<img src="resources/logos/addv.png">
+				
+				<div id="buy_col">
+					<h4 onclick="open_link_ADDV_COL();"> COLORIDO </h4>
+				</div>
+				
+				<div id="buy_pb">
+					<h4 onclick="open_link_ADDV_PB();"> PRETO & BRANCO </h4>
+				</div>
 			</div>
 		</div>
-	
+		
 	</div>
 	
-	<div class="divider_bar" style="width: 1600px; transform:translate(120px, 50px) scale(1);"><img src="resources/divider.png"> </img></div>
+	<div class="big_light">
+		<img src="resources/bright_divider.png">
+	</div>
 	
-	<div class="classes_biografia" style="position: absolute; width: 98vw; height: 960px;">
-	
-		<img style="position: absolute; z-index: 0; transform:translate(665px, 350px) scale(1.8);" src="resources/black paper.png"> </img>
-	
-		<p id="_dc" style="width: 400px; transform:translate(710px, -15px) scale(1.2); color: white"> QUEM SOU EU </p>
-		
-		<img style="transform:translate(665px, -100px) scale(0.85); z-index: 1; " src="resources/foto.png"> </img>
-		
-		<p id="_dc" style="width: 643px; z-index: 2; font-family: 'Morning Coffee', sans-serif; transform:translate(590px ,-180px); color: yellow"> Isabelly Rodrigues </p>
-		
-		<div style="z-index: 2; transform: translate(590px, -210px); width: 643px; height: 52%">
-			<p id="_dc" style="z-index: 2; font-family: 'Morning Coffee', sans-serif; font-size: 20px; color: white; width: 643px"> Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br> <span style="font-family: 'Morning Coffee', sans-serif; color: lightgray"> Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span> </p>
+	<div class="info">
+		<div class="title">
+			<h4> Entre palavras, entre poesias</h4>
+			<h4 style="font-family: 'Morning Coffee', sans-serif; font-size: 20px;"> Você encontra um mar de frases e poesias. </h4>
 		</div>
+		
+		<div class="desc">
+			<h4> Um livro de palavras fortes, sentimentos fortes e emoções fortes. A única fraqueza é que termina e continua em outra história. Poemas, frases que você se identifica. Tivemos histórias parecidas, mas com começos diferentes. Mas este é o meu próprio caminho baseado nesse livro. </h4>
+		</div>
+	</div> 
 	
+	<div class="flower_divisor">
+		<img src="resources/divider.png">
 	</div>
-
+	
+	<div class="biography">
+		<div class="inner_bio">
+			<img style="width: 45%; margin-bottom: -5px;" src="resources/foto.png">
+			
+			<h4 style="margin-top: -5px; color:yellow; font-size: 30px; font-family: 'Morning Coffee', sans-serif;"> Isabelly Rodrigues </h4>
+			<p style="width: 70%; margin-top: -40px; font-size: 15px; font-family: 'Morning Coffee', sans-serif; text-align: center;"> Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! </p>
+			<p style="width: 70%; margin-top: -5px; margin-bottom: 180px; color: lightgray; font-size: 15px; font-family: 'Morning Coffee', sans-serif; text-align: center;"> Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </p>
+		</div>
+	</div>
 </body>
 
-<script type="text/javascript">
+<script>
+	const links = [
+		"https://loja.uiclap.com/titulo/ua69362/",
+		"https://loja.uiclap.com/titulo/ua69355/",
+		"https://loja.uiclap.com/titulo/ua69334/",
+		"https://loja.uiclap.com/titulo/ua69495/",
+	]
 
-	var back = document.getElementById("web_bg_id");
-	window.addEventListener("scroll", function() {
-		back.style.backgroundPosition = +window.pageYOffset+"px";
-	})
-
+	function open_link_AQP_COL() { window.open(links[0], "_blank"); }
+	function open_link_AQP_PB() { window.open(links[1], "_blank"); }
+	function open_link_ADDV_COL() { window.open(links[2], "_blank"); }
+	function open_link_ADDV_PB() { window.open(links[3], "_blank"); }
 </script>
+
+<script type="text/javascript" src="scrollable_bg.js"></script>
 
 </html>
