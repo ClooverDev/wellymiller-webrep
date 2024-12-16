@@ -311,19 +311,11 @@
 			})
 			
 			$(bkg_1_cl).on('click', function(){
-				if (window.location.hostname != "") {
-					window.open(window.top.hostname+"/livros/aquartaparede", "_blank");
-				} else {
-					window.open("livros/aquartaparede.html", "_blank");
-				}
+				window.open("livros/aquartaparede", "_blank");
 			})
 			
 			$(bkg_1_pb).on('click', function(){
-				if (window.location.hostname != "") {
-					window.open(window.top.hostname+"/livros/aquartaparede_pb", "_blank");
-				} else {
-					window.open("livros/aquartaparede_pb.html", "_blank");
-				}
+				window.open("livros/aquartaparede_pb.html", "_blank");
 			})
 			
 			$(bkg_1_pb).hover(function(){
@@ -347,19 +339,11 @@
 			})
 			
 			$(bkg_2_cl).on('click', function(){
-				if (window.location.hostname != "") {
-					window.open(window.top.hostname+"/livros/adimensaodovidro", "_blank");
-				} else {
-					window.open("livros/adimensaodovidro.html", "_blank");
-				}
+				window.open("livros/adimensaodovidro.html", "_blank");
 			})
 			
 			$(bkg_2_pb).on('click', function(){
-				if (window.location.hostname != "") {
-					window.open(window.top.hostname+"/livros/adimensaodovidro_pb", "_blank");
-				} else {
-					window.open("livros/adimensaodovidro_pb.html", "_blank");
-				}
+				window.open("livros/adimensaodovidro_pb.html", "_blank");
 			})
 			
 			$(bkg_2_pb).hover(function(){
@@ -382,11 +366,7 @@
 			})
 			
 			$(bkg_3_cl).on('click', function(){
-				if (window.location.hostname != "") {
-					window.open(window.top.hostname+"/livros/candythedog", "_blank");
-				} else {
-					window.open("livros/candythedog.html", "_blank");
-				}
+				window.open("livros/candythedog.html", "_blank");
 			})
 			
 			$(".book_child").on('mouseleave', function(){
@@ -403,11 +383,7 @@
 		if (isMobile()) {
 			console.log("user is on mobile!");
 			
-			if (window.location.hostname != "") {
-				window.top.location = window.location.hostname+"/mobile";
-			} else {
-				window.top.location = "mobile.html";
-			}
+			window.top.location = "mobile.html";
 			
 		} else {
 			console.log("user is on desktop!");
