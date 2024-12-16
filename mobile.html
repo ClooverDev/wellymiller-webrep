@@ -65,7 +65,7 @@
 				margin-top:60px;
 			
 				width: 100vw;
-				height: 400px;
+				height: 300px;
 				
 				transform: translate(45px, 100px);
 				
@@ -278,6 +278,8 @@
 	
 	<body bgColor="black">
 	
+		<div class="snow"></div>
+	
 		<div class="web_bg"></div>
 	
 		<div class="main">
@@ -368,11 +370,19 @@
 			})
 			
 			$(bkg_1_cl).on('touchstart', function(){
-				window.open("livros/aquartaparede.html", "_blank");
+				if (window.location.hostname != "") {
+					window.open(window.top.hostname+"/livros/aquartaparede", "_blank");
+				} else {
+					window.open("livros/aquartaparede.html", "_blank");
+				}
 			})
 			
 			$(bkg_1_pb).on('touchstart', function(){
-				window.open("livros/aquartaparede_pb.html", "_blank");
+				if (window.location.hostname != "") {
+					window.open(window.top.hostname+"/livros/aquartaparede_pb", "_blank");
+				} else {
+					window.open("livros/aquartaparede_pb.html", "_blank");
+				}
 			})
 			
 			$(bkg_1_pb).hover(function(){
@@ -396,11 +406,19 @@
 			})
 			
 			$(bkg_2_cl).on('touchstart', function(){
-				window.open("livros/adimensaodovidro.html", "_blank");
+				if (window.location.hostname != "") {
+					window.open(window.top.hostname+"/livros/adimensaodovidro", "_blank");
+				} else {
+					window.open("livros/adimensaodovidro.html", "_blank");
+				}
 			})
 			
 			$(bkg_2_pb).on('touchstart', function(){
-				window.open("livros/adimensaodovidro_pb.html", "_blank");
+				if (window.location.hostname != "") {
+					window.open(window.top.hostname+"/livros/adimensaodovidro_pb", "_blank");
+				} else {
+					window.open("livros/adimensaodovidro_pb.html", "_blank");
+				}
 			})
 			
 			$(bkg_2_pb).hover(function(){
@@ -423,7 +441,11 @@
 			})
 			
 			$(bkg_3_cl).on('touchstart', function(){
-				window.open("livros/candythedog.html", "_blank");
+				if (window.location.hostname != "") {
+					window.open(window.top.hostname+"/livros/candythedog", "_blank");
+				} else {
+					window.open("livros/candythedog.html", "_blank");
+				}
 			})
 			
 			$(".book_child").on('touchcancel', function(){
@@ -444,7 +466,11 @@
 		} else {
 			console.log("user is on desktop!");
 			
-			window.top.location = "https://wellymilller.clooverlandstudios.com";
+			if (window.location.hostname != "") {
+				window.top.location = window.location.hostname;
+			} else {
+				window.top.location = "index.html";
+			}
 		}
 
 	</script>
