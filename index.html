@@ -93,6 +93,9 @@
 				width: 800px;
 				height: 500px;
 				
+				margin-top: 105px;
+				margin-bottom: 110px;
+				
 				display: flex;
 				flex-direction: row;
 				
@@ -101,7 +104,7 @@
 			}
 			
 			.new_book_3D {
-				margin-top: -20px;
+				margin-top: 35px;
 				height: 400px;
 				width: 210px;
 				
@@ -109,8 +112,8 @@
 			}
 			
 			@keyframes linear_light {
-				from { transform: scale(1); filter: drop-shadow(0 0 0 black); }
-				to { transform: scale(1.1); filter: drop-shadow(0 0 10px yellow); }
+				from { transform: scale(1.35); filter: drop-shadow(0 0 0 black); }
+				to { transform: scale(1.45); filter: drop-shadow(0 0 10px yellow); }
 			}
 			
 			.divider {
@@ -221,6 +224,22 @@
 				
 				position: absolute;
 			}
+			
+			.comprar_agora {
+				margin-top: -100px;
+				animation: 6s ca ease infinite alternate;
+			}
+			
+			@keyframes ca {
+				from { transform: scale(0.75); filter: drop-shadow(0 0 0 black); }
+				to { transform: scale(0.8); filter: drop-shadow(0 0 15px yellow); }
+			}
+			
+			.comprar_agora:hover {
+				cursor: pointer;
+				transform: scale(0.8); filter: drop-shadow(0 0 15px white);
+				animation: none;
+			}
 		</style>
 	
 	</head>
@@ -236,9 +255,10 @@
 		</div>
 		
 		<div class="new_book">
-			<div style="text-decoration: underline; display: flex; flex-direction: column; align-items: center; justify-content: center;" class="book_visual">
-				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow);"> NOVO LIVRO EM BREVE! </h3>
-				<img class="new_book_3D" src="resources/capas/secret_3d.png">
+			<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" class="book_visual">
+				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow); text-align: center;"> DENTRO DAS PAREDES: VOLUME 3 <br> <span style="font-size: 60px; text-decoration: none; color: yellow;"> CONTRA-PAREDE </span> </h3>
+				<img class="new_book_3D" src="resources/capas/contra_parede_3d.png">
+				<img class="comprar_agora" src="resources/comprar_agora.png">
 			</div>
 		</div>
 		
@@ -372,6 +392,11 @@
 			$(".book_child").on('mouseleave', function(){
 				$("#"+bkg_title_3).css("color", "white");
 				document.getElementById(bkg_title_3).innerHTML = default_text;
+			})
+			
+			// BOOK 4 AD: CONTRA-PAREDE
+			$(".comprar_agora").on('click', function(){
+				window.open("livros/contraparede", "_blank");
 			})
 		})
 		
