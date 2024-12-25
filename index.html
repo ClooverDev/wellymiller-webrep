@@ -273,7 +273,7 @@
 				<img style="transform: scale(0.5);" src="resources/logos/aqp.png">
 				<h2 id="title_1" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> PASSE O MOUSE </h2>
 				<div class="books">
-					<img id="is_book_1_cl" src="resources/capas/a_quarta_parede_3d.png">
+					<img id="is_book_1_pb" src="resources/capas/a_quarta_parede_3d.png">
 				</div>
 			</div>
 			
@@ -288,7 +288,7 @@
 			
 			<div class="book_child">
 				<img style="transform: scale(0.5); height: 430px;" src="resources/logos/contraparede.png">
-				<h2 id="title_2" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> PASSE O MOUSE </h2>
+				<h2 id="title_4" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> PASSE O MOUSE </h2>
 				<div class="books">
 					<img id="is_book_4_pb" src="resources/capas/contra_parede_3d.png">
 				</div>
@@ -338,11 +338,6 @@
 			// BOOK 1: A QUARTA PAREDE
 			const bkg_1_pb = "#is_book_1_pb";
 			const bkg_title_1 = "title_1";
-			
-			$(bkg_1_cl).hover(function(){
-				$("#"+bkg_title_1).css("color", "yellow");
-				document.getElementById(bkg_title_1).innerHTML = "PRETO & BRANCO";
-			})
 			
 			$(bkg_1_pb).on('click', function(){
 				window.open("livros/aquartaparede", "_blank");
@@ -404,9 +399,26 @@
 				document.getElementById(bkg_title_3).innerHTML = default_text;
 			})
 			
-			// BOOK 4 AD: CONTRA-PAREDE
+			// BOOK 4: CONTRA-PAREDE
 			$(".comprar_agora").on('click', function(){
 				window.open("livros/contraparede", "_blank");
+			})
+			
+			const bkg_4_cl = "#is_book_4_pb";
+			const bkg_title_4 = "title_4";
+			
+			$(bkg_4_cl).hover(function(){
+				$("#"+bkg_title_4).css("color", "yellow");
+				document.getElementById(bkg_title_4).innerHTML = "PRETO & BRANCO";
+			})
+			
+			$(bkg_4_cl).on('click', function(){
+				window.open("livros/contraparede", "_blank");
+			})
+			
+			$(".book_child").on('mouseleave', function(){
+				$("#"+bkg_title_4).css("color", "white");
+				document.getElementById(bkg_title_4).innerHTML = default_text;
 			})
 		})
 		
