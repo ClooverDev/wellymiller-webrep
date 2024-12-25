@@ -25,6 +25,11 @@
 				
 				align-items: center;
 				justify-content: center;
+				
+				overflow: hidden;
+				overflow-y: visible;
+				
+				width: 100%;
 			}
 			
 			.main {
@@ -296,9 +301,7 @@
 	
 		<div class="web_bg"></div>
 	
-		<div class="main">
-	
-			<div class="top">
+		<div class="top">
 				<img src="resources/header.png">
 			</div>
 			
@@ -314,14 +317,15 @@
 			
 			<div class="divider"></div>
 			
+			<img style="margin-top: 120px; margin-bottom: -20px; transform: scale(1.2)" src="resources/dentrodasparedes.png">
+			
 			<div class="books_main_group">
 				<div class="book_group">
 					<div class="book_child" style="margin-right: 120px;">
 						<img style="transform: scale(0.5);" src="resources/logos/aqp.png">
 						<h2 id="title_1" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> APERTE </h2>
 						<div class="books">
-							<img id="is_book_1_cl" style="margin-right: -290px;" src="resources/capas/a_quarta_parede_3d.png">
-							<img id="is_book_1_pb" src="resources/capas/a_quarta_parede_3d_pb.png">
+							<img id="is_book_1_pb" src="resources/capas/a_quarta_parede_3d.png">
 						</div>
 					</div>
 					
@@ -333,14 +337,28 @@
 							<img id="is_book_2_pb" src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
 						</div>
 					</div>
-				</div>
-				
+			</div>
+			
+			<div class="books_main_group">
+				<div class="book_group">
+					<div class="book_child" style="margin-right: 120px;">
+						<img style="transform: scale(0.6); height: 430px; margin-top: 800px" src="resources/logos/contraparede.png">
+						<h2 id="title_2" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> APERTE </h2>
+						<div class="books">
+							<img id="is_book_4_pb" src="resources/capas/contra_parede_3d.png">
+						</div>
+					</div>
+			</div>
+			
+			<img style="width: 100%; margin-top: 60px; margin-bottom: 20px; filter: drop-shadow(0 0 10px white) blur(4px);" src="resources/linha.png">
+			
+			<div class="books_main_group">
 				<div class="book_group" style="margin-top:360px;">
 					<div class="book_child">
 						<img style="transform: scale(0.45); height: 300px;" src="resources/logos/ctd.png">
 						<h2 id="title_3" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -120px; transform: translateY(53px);"> APERTE </h2>
 						<div class="books" style="transform:translateY(55px);">
-							<img id="is_book_3_cl" src="resources/capas/candy_the_dog_3d.png">
+							<img id="is_book_3_pb" src="resources/capas/candy_the_dog_3d.png">
 						</div>
 					</div>
 				</div>
@@ -350,13 +368,11 @@
 			
 			<div class="divider" style="margin-top:920px; transform: scale(2.5) translate(35px,-30px);"></div>
 		
-		</div>
-		
 		<div class="bio">
 			<div class="bio_inner_group">
-				<img style="transform: translateY(-120px) scale(1);" src="resources/foto.png">
-				<h1 style="filter: drop-shadow(0 0 5px yellow); transform: translateY(-180px); font-size: 50px; font-family: 'Morning Coffee', sans-serif; color:gold; text-align: center;"> Isabelly Rodrigues </h1>
-				<p style="filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25)); transform: translateY(-230px); width: 70%; font-size: 23px;  font-family: 'Mali', sans-serif; text-align: center;">
+				<img style="transform: translate(25px, -120px) scale(1);" src="resources/foto.png">
+				<h1 style="filter: drop-shadow(0 0 5px yellow); transform: translate(25px, -180px); font-size: 50px; font-family: 'Morning Coffee', sans-serif; color:gold; text-align: center;"> Isabelly Rodrigues </h1>
+				<p style="filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25)); transform: translate(25px, -230px); width: 70%; font-size: 23px;  font-family: 'Mali', sans-serif; text-align: center;">
 					Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
 
 					<span style="color:lightgray; font-family: 'Mali', sans-serif;">Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
@@ -431,7 +447,7 @@
 			})
 			
 			// BOOK 3: CANDY THE DOG
-			const bkg_3_cl = "#is_book_3_cl";
+			const bkg_3_cl = "#is_book_3_pb";
 			const bkg_title_3 = "title_3";
 			
 			$(bkg_3_cl).hover(function(){

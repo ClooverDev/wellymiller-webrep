@@ -262,17 +262,18 @@
 			</div>
 		</div>
 		
-		<div class="cool_bg"></div>
+		<div style="transform: translateY(-1700px);" class="cool_bg"></div>
 		
 		<div class="divider"></div>
 		
-		<div class="books_main_group">
+		<img src="resources/dentrodasparedes.png">
+		
+		<div class="books_main_group">	
 			<div class="book_child">
 				<img style="transform: scale(0.5);" src="resources/logos/aqp.png">
 				<h2 id="title_1" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> PASSE O MOUSE </h2>
 				<div class="books">
-					<img id="is_book_1_cl" style="margin-right: -290px;" src="resources/capas/a_quarta_parede_3d.png">
-					<img id="is_book_1_pb" src="resources/capas/a_quarta_parede_3d_pb.png">
+					<img id="is_book_1_cl" src="resources/capas/a_quarta_parede_3d.png">
 				</div>
 			</div>
 			
@@ -286,10 +287,24 @@
 			</div>
 			
 			<div class="book_child">
+				<img style="transform: scale(0.5); height: 430px;" src="resources/logos/contraparede.png">
+				<h2 id="title_2" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -90px;"> PASSE O MOUSE </h2>
+				<div class="books">
+					<img id="is_book_4_pb" src="resources/capas/contra_parede_3d.png">
+				</div>
+			</div>
+		</div>
+		
+		<img style="width: 100%; margin-top: 60px; margin-bottom: 20px; filter: drop-shadow(0 0 10px white) blur(4px);" src="resources/linha.png">
+		
+		<img style="margin-top:40px; margin-bottom: -60px" src="resources/outroslivros.png">
+		
+		<div class="books_main_group">
+			<div class="book_child">
 				<img style="transform: scale(0.45); height: 300px;" src="resources/logos/ctd.png">
 				<h2 id="title_3" style="font-family: 'Morning Coffee', sans-serif; color: white; text-align: center; filter: drop-shadow(0 0 3px yellow); font-size: 30px; margin-bottom: 25px; margin-top: -120px; transform: translateY(53px);"> PASSE O MOUSE </h2>
 				<div class="books" style="transform:translateY(55px);">
-					<img id="is_book_3_cl" src="resources/capas/candy_the_dog_3d.png">
+					<img id="is_book_3_pb" src="resources/capas/candy_the_dog_3d.png">
 				</div>
 			</div>
 		</div>
@@ -321,21 +336,16 @@
 			const default_text = "PASSE O MOUSE";
 		
 			// BOOK 1: A QUARTA PAREDE
-			const bkg_1_cl = "#is_book_1_cl";
 			const bkg_1_pb = "#is_book_1_pb";
 			const bkg_title_1 = "title_1";
 			
 			$(bkg_1_cl).hover(function(){
 				$("#"+bkg_title_1).css("color", "yellow");
-				document.getElementById(bkg_title_1).innerHTML = "COLORIDO";
-			})
-			
-			$(bkg_1_cl).on('click', function(){
-				window.open("livros/aquartaparede", "_blank");
+				document.getElementById(bkg_title_1).innerHTML = "PRETO & BRANCO";
 			})
 			
 			$(bkg_1_pb).on('click', function(){
-				window.open("livros/aquartaparede_pb", "_blank");
+				window.open("livros/aquartaparede", "_blank");
 			})
 			
 			$(bkg_1_pb).hover(function(){
@@ -377,12 +387,12 @@
 			})
 			
 			// BOOK 3: CANDY THE DOG
-			const bkg_3_cl = "#is_book_3_cl";
+			const bkg_3_cl = "#is_book_3_pb";
 			const bkg_title_3 = "title_3";
 			
 			$(bkg_3_cl).hover(function(){
 				$("#"+bkg_title_3).css("color", "yellow");
-				document.getElementById(bkg_title_3).innerHTML = "COLORIDO";
+				document.getElementById(bkg_title_3).innerHTML = "PRETO & BRANCO";
 			})
 			
 			$(bkg_3_cl).on('click', function(){
