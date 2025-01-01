@@ -66,29 +66,6 @@
 				filter: drop-shadow(0 0 25px lightblue);
 			}
 			
-			.web_bg {
-				background-image: url(resources/xmas/background_2_xmas.png);
-				position: fixed;
-				top: 0;
-				left: 0;
-				filter: blur(8px);
-				width: 1000000px;
-				height: 1000000px;
-				z-index: -2;
-				
-				animation: scrollingBG 40s ease infinite alternate;
-			}
-			
-			@keyframes scrollingBG {
-				from {
-					transform: translate(-5000px, -5000px);
-				}
-				
-				to {
-					transform: translate(5px, 5px);
-				}
-			}
-			
 			.new_book {
 				width: 800px;
 				height: 500px;
@@ -281,15 +258,42 @@
 				
 				cursor: pointer;
 			}
+			
+			.web_bg {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 400%;
+				z-index: -2;
+				transform: scale(1);
+			}
+			
+			.web_bg img {
+				width: 100%;
+			}
+			
+			#rept_wll {
+				height: 100%;
+				width: 100%;
+				
+				z-index: -1;
+				
+				margin-top: -10px;
+				
+				background-repeat: repeat-y;
+				background-size: 100%;
+				background-image: url(resources/bg_2.png);
+			}
 		</style>
 	
 	</head>
 	
 	<body bgColor="black">
-	
-		<div class="snow"></div>
-	
-		<div class="web_bg"></div>
+		<div class="web_bg">
+			<img style="z-index: -2;" src="resources/bg_1.png">
+			<div id="rept_wll"></div>
+		</div>
 	
 		<div class="top">
 			<img src="resources/header.png">
@@ -303,7 +307,7 @@
 			</div>
 		</div>
 		
-		<div style="transform: translateY(-1700px);" class="cool_bg"></div>
+		
 		
 		<div class="divider"></div>
 		
@@ -406,7 +410,7 @@
 			})
 			
 			$(social_instagram).on('click', function(){
-				window.open("https://www.instagram.com/isabzzss", "_blank");
+				window.open("https://www.instagram.com/wellymiller._/", "_blank");
 			})
 			
 			////////////////////////////////

@@ -44,19 +44,6 @@
 				transform: translateX(-230px);
 			}
 			
-			.scrollable_bg {
-				top: 0;
-				left: 0;
-				
-				width: 10000px;
-				height: 10000px;
-				
-				background-image: url("resources/xmas/background_2_xmas.png");
-				position: fixed;
-				
-				animation: corner_to_corner 120s ease alternate infinite;
-			}
-			
 			@keyframes corner_to_corner {
 				from {
 					transform: translate(-5000px, -5000px);
@@ -191,12 +178,34 @@
 				margin-right: 10px;
 				filter: drop-shadow(0 0 8px white);
 			}
+			
+			.scrollable_bg {
+				top: 0;
+				left: 0;
+				
+				width: 100%;
+				height: 332%;
+				position: absolute;
+				overflow-x: hidden;
+			}
+			
+			
+			.pt {
+				background-image: url(resources/bg_2.png);
+				background-repeat: repeat-y;
+				margin-top: -7px;
+				width: 100%;
+				height: 100%;
+			}
 		
 		</style>
 	</head>
 	
 	<body bgColor="black">
-		<div class="scrollable_bg"></div>
+		<div class="scrollable_bg">
+			<img src="resources/bg_1.png">
+			<div class="pt"></div>
+		</div>
 	
 		<div class="header">
 			<img src="resources/header.png" style="width: 800px;">
@@ -346,10 +355,10 @@
 			})
 			
 			$(social_instagram).on('click', function(){
-				window.open("https://www.instagram.com/isabzzss", "_blank");
+				window.open("https://www.instagram.com/wellymiller._/", "_blank");
 			})
 		})
-
+		
 		function isMobile() {
 		  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 		  return regex.test(navigator.userAgent);
