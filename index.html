@@ -205,6 +205,7 @@
 			.comprar_agora {
 				margin-top: -100px;
 				animation: 6s ca ease infinite alternate;
+				display: none;
 			}
 			
 			@keyframes ca {
@@ -299,17 +300,17 @@
 			<img src="resources/header.png">
 		</div>
 		
-		<div class="new_book" style="display: none">
+		<div class="new_book">
 			<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" class="book_visual">
-				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow); text-align: center;"> DENTRO DAS PAREDES: VOLUME 3 <br> <span style="font-size: 60px; text-decoration: none; color: yellow;"> CONTRA-PAREDE </span> </h3>
-				<img class="new_book_3D" src="resources/capas/contra_parede_3d.png">
+				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow); text-align: center;"> NOVO LIVRO EM BREVE! <br> <span style="font-size: 60px; text-decoration: none; color: yellow;"> ??? </span> </h3>
+				<img class="new_book_3D" src="resources/capas/secret_3d.png">
 				<img class="comprar_agora" src="resources/comprar_agora.png">
 			</div>
 		</div>
 		
 		
 		
-		<div class="divider" style="display: none"></div>
+		<div class="divider"></div>
 		
 		<img src="resources/dentrodasparedes.png">
 		
@@ -410,7 +411,7 @@
 			})
 			
 			$(social_instagram).on('click', function(){
-				window.open("https://www.instagram.com/bwe.lly/", "_blank");
+				window.open("https://www.instagram.com/wellymiller._/", "_blank");
 			})
 			
 			////////////////////////////////
@@ -512,7 +513,7 @@
 		if (isMobile()) {
 			console.log("user is on mobile!");
 			
-			window.top.location = "https://wm.clooverlandstudios.com/mobile";
+			window.top.location = "https://wellymiller.clooverlandstudios.com/mobile";
 			
 		} else {
 			console.log("user is on desktop!");
