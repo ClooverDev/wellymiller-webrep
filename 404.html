@@ -56,6 +56,11 @@
 				cursor: pointer;
 				filter: drop-shadow(0 0 3px yellow);
 			}
+			
+			#bg2 {
+				margin-top: -8px;
+				margin-bottom: -8px;
+			}
 		</style>
 	
 	</head>
@@ -63,6 +68,11 @@
 	<body bgColor="black">
 		<div class="web_bg">
 			<img style="z-index: -2; margin-bottom: -9px;" src="https://wm.clooverlandstudios.com/resources/bg_1.png">
+			<img id="bg2" src="resources/bg_2.png">
+			<img id="bg2" src="resources/bg_2.png">
+			<img id="bg2" src="resources/bg_2.png">
+			<img id="bg2" src="resources/bg_2.png">
+			<img id="bg2" src="resources/bg_2.png">
 		</div>
 		
 		<div class="info">
@@ -81,6 +91,10 @@
 		}
 	
 		$(document).ready(function(){
+			if (isMobile() == false) {
+				$("#bg2").css("display", "none");
+			}
+		
 			$("#homeb").on("click", function(){
 				if (isMobile()) {
 					window.top.location = "https://wm.clooverlandstudios.com/mobile";
