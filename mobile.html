@@ -319,18 +319,17 @@
 	
 	<script>
 		
-		$(document).ready(function(){
-		
-			$(book4_alt).on("click", function() {
-				window.open("livros/aminhanoiteestrelada", "_blank")
-			})
-			
+		$(document).ready(function(){		
 			const book1 = "#book_1_buy"; // A QUARTA PAREDE
 			const book2COL = "#book_2_buy_c"; // A DIMENSAO DO VIDRO (COLORIDO)
 			const book2PB = "#book_2_buy_pb"; // A DIMENSAO DO VIDRO (PRETO E BRANCO)
 			const book3 = "#book_3_buy"; // CANDY THE DOG
 			const book4 = "#book_4_buy"; // CONTRA PAREDE
-			const book4_alt = "#book_4_buy_alt"; // CONTRA PAREDE
+			const book4_alt = "#book_4_buy_alt"; // LIVRO NOVO
+
+                        $(book4_alt).on("click", function() {
+				window.open("livros/aminhanoiteestrelada", "_blank")
+			})
 			
 			$(book1).on("click", function() {
 				window.open("livros/aquartaparede", "_blank")
