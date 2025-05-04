@@ -228,12 +228,12 @@
 		</div>
 		
 		<div class="new_book" style="margin-top: -10px; margin-bottom: -15px;">
-			<h3> EM BREVE! </h3>
+			<h3> NOVIDADE! </h3>
 			<h2 style="color: yellow; font-size: 23px; margin-top: -15px;"> A MINHA NOITE ESTRELADA </h2>
 			
 			<div class="book_preview" style="margin-top: -10px;">
-				<img style="width:160px;" src="resources/capas/a_minha_noite_estrelada_3d.png">
-				<img id="book_4_buy_alt" style="width: 250px; margin-top: -69px; display: none;" src="resources/comprar_agora.png">
+				<img style="width:160px;" src="resources/capas/a_minha_noite_estrelada_3d_2.png">
+				<img id="book_4_buy_alt" style="width: 250px; margin-top: -69px; " src="resources/comprar_agora.png">
 			</div>
 		</div>
 		
@@ -293,7 +293,7 @@
 			<div class="bio_inner" style="margin-top: 25px;">
 				<h3 style="color: yellow; font-size: 25px; margin-top:50px; width: 80%; text-align: right;"> Isabelly Rodrigues </h3>
 				<p style="margin-top: -25px; filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25)); width: 75%; font-size: 13px;  font-family: 'Mali', sans-serif; text-align: left; transform: translateX(-12px);">
-					Isabelly Rodrigues, conhecida pelo seu nome artístico Welly Miller. É uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
+					Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
 
 					<span style="color:lightgray; font-family: 'Mali', sans-serif;">Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
 				</p>
@@ -320,6 +320,10 @@
 	<script>
 		
 		$(document).ready(function(){
+		
+			$(book4_alt).on("click", function() {
+				window.open("livros/aminhanoiteestrelada", "_blank")
+			})
 			
 			const book1 = "#book_1_buy"; // A QUARTA PAREDE
 			const book2COL = "#book_2_buy_c"; // A DIMENSAO DO VIDRO (COLORIDO)
@@ -345,10 +349,6 @@
 			})
 			
 			$(book4).on("click", function() {
-				window.open("livros/contraparede", "_blank")
-			})
-			
-			$(book4_alt).on("click", function() {
 				window.open("livros/contraparede", "_blank")
 			})
 			

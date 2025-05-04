@@ -205,7 +205,6 @@
 			.comprar_agora {
 				margin-top: -100px;
 				animation: 6s ca ease infinite alternate;
-				display: none;
 			}
 			
 			@keyframes ca {
@@ -308,10 +307,10 @@
 			<img src="resources/header.png">
 		</div>
 		
-		<div class="new_book" style="transform: translateY(-40px);">
+		<div class="new_book" style="transform: translateY(0px);">
 			<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;" class="book_visual">
-				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow); text-align: center;"> EM BREVE! <br> <span style="font-size: 60px; text-decoration: none; color: yellow;"> A Minha Noite Estrelada </span> </h3>
-				<img class="new_book_3D" src="resources/capas/a_minha_noite_estrelada_3d.png">
+				<h3 style="font-size: 30px; filter: drop-shadow(0 0 3px yellow); text-align: center;"> NOVIDADE! <br> <span style="font-size: 60px; text-decoration: none; color: yellow;"> A Minha Noite Estrelada </span> </h3>
+				<img class="new_book_3D" src="resources/capas/a_minha_noite_estrelada_3d_2.png">
 				<img class="comprar_agora" src="resources/comprar_agora.png">
 			</div>
 		</div>
@@ -372,7 +371,7 @@
 				<img style="transform: translateY(-120px) scale(1);" src="resources/foto.png">
 				<h1 style="filter: drop-shadow(0 0 5px yellow); transform: translateY(-180px); font-size: 50px; font-family: 'Morning Coffee', sans-serif; color:gold; text-align: center;"> Isabelly Rodrigues </h1>
 				<p style="filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25)); transform: translateY(-230px); width: 70%; font-size: 23px;  font-family: 'Mali', sans-serif; text-align: center;">
-					Isabelly Rodrigues, conhecida pelo seu nome artístico Welly Miller. É uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
+					Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
 
 					<span style="color:lightgray; font-family: 'Mali', sans-serif;">Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
 				</p>
@@ -399,6 +398,10 @@
 	
 	<script>
 		$(document).ready(function(){
+		
+			$(".comprar_agora").on('click', function(){
+				window.open("livros/aminhanoiteestrelada", "_blank");
+			})
 		
 			// SOCIAL MEDIAS \\
 			const social_bluesky = "#sm_bluesky";
@@ -491,10 +494,6 @@
 			})
 			
 			// BOOK 4: CONTRA-PAREDE
-			$(".comprar_agora").on('click', function(){
-				window.open("livros/contraparede", "_blank");
-			})
-			
 			const bkg_4_cl = "#is_book_4_pb";
 			const bkg_title_4 = "title_4";
 			
