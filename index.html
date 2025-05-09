@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> Estante da Welly Miller </title>
+
+        <link rel="icon" href="icon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/mali" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+
+    </head>
+
+    <body bgcolor="#222222">
+        <div class="__web_background">
+            <img class="__wb_top" src="resources/bg.png">
+        </div>
+
+        <header>
+            <img class="header_img" src="resources/header.png">
+        </header>
+
+        <main>
+            <div class="new_book">
+                <h1>NOVIDADE!</h1>
+                <h2>A Minha Noite Estrelada</h2>
+                <img class="book_icon" src="resources/capas/a_minha_noite_estrelada_3d.png">
+                <img class="buy_new_book" id="A_MINHA_NOITE_ESTRELADA" src="resources/comprar_agora.png">
+            </div>
+
+            <div class="divider"><img src="resources/divider.png"></div>
+
+            <div class="estante">
+                <img class="titulo" src="resources/dentrodasparedes.png">
+                <h1 class="descricao" style="font-family: 'Mali', sans-serif;"> Livros de poesias sobre romance, tragédias e decepções amorosas.</h1>
+
+                <div class="livros">
+                    <img class="livro" id="A_QUARTA_PAREDE" src="resources/capas/a_quarta_parede_3d.png">
+                    <img class="livro" id="A_DIMENSAO_DO_VIDRO_COL" src="resources/capas/a_dimensao_do_vidro_3d.png">
+                    <img class="livro" id="A_DIMENSAO_DO_VIDRO_PB" src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
+                    <img class="livro" id="CONTRA_PAREDE" src="resources/capas/contra_parede_3d.png">
+                </div>
+            </div>
+
+            <div class="estante" id="outra_estate_2">
+                <img class="titulo" src="resources/outroslivros.png">
+                <h1 class="descricao" style="font-family: 'Mali', sans-serif; margin-top:0px;"> Outros livros feitos.</h1>
+
+                <div class="livros" style="margin-left: 10px;">
+                    <img class="livro_solo" id="CANDY_THE_DOG" src="resources/capas/candy_the_dog_3d.png">
+                </div>
+            </div>
+
+            <div class="divider"><img src="resources/divider.png"></div>
+
+            <div class="biografia">
+                <div class="bio">
+                    <div class="inner_bio">
+                        <img class="foto" src="resources/foto.png">
+                        <h1> ISABELLY RODRIGUES</h1>
+                        <p>
+                            Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
+        
+                            <span>Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="social_medias">
+                <img class="sm" id="ttk" src="resources/socialmedia/tiktok.png">
+                <img class="sm" id="inst" src="resources/socialmedia/instagram.png">
+                <img class="sm" id="bsk" src="resources/socialmedia/bluesky.png">
+                <img class="sm" id="twt" src="resources/socialmedia/twitter.png">
+            </div>
+        </footer>
+
+    </body>
+
+    <script>
+
+        $(document).ready(function(){
+            console.log('ready')
+
+            // START \\
+
+            /// SOCIAL MEDIAS \\\
+            const __social_medias = [
+                [$("#ttk"), "https://www.tiktok.com/@wellymi7"],
+                [$("#inst"), "https://www.instagram.com/welly.escritora/"],
+                [$("#bsk"), "https://bsky.app/profile/bwelly.bsky.social"],
+                [$("#twt"), "https://x.com/Bey7w7"],
+            ]
+
+            function open_social_media(__url) {
+                console.log("social_media function called")
+                open(__url, "_blank");
+            }
+
+            __social_medias[0][0].click(function(){ open_social_media(__social_medias[0][1]) }); // TIKTOK
+            __social_medias[1][0].click(function(){ open_social_media(__social_medias[1][1]) }); // INSTAGRAM
+            __social_medias[2][0].click(function(){ open_social_media(__social_medias[2][1]) }); // BLUESKY
+            __social_medias[3][0].click(function(){ open_social_media(__social_medias[3][1])}); // TWITTER/X
+
+
+            /// BOOKS \\\
+            const books = [
+                [$("#A_QUARTA_PAREDE"), "https://wm.clooverlandstudios.com/livros/aquartaparede"],
+                [$("#A_DIMENSAO_DO_VIDRO_COL"), "https://wm.clooverlandstudios.com/livros/adimensaodovidro"],
+                [$("#A_DIMENSAO_DO_VIDRO_PB"), "https://wm.clooverlandstudios.com/livros/preto-e-branco/adimensaodovidro"],
+                [$("#CONTRA_PAREDE"), "https://wm.clooverlandstudios.com/livros/contraparede"],
+                [$("#A_MINHA_NOITE_ESTRELADA"), "https://wm.clooverlandstudios.com/livros/aminhanoiteestrelada"],
+                [$("#CANDY_THE_DOG"), "https://wm.clooverlandstudios.com/livros/candythedog"],
+            ]
+
+            function open_book_page(__url) { open(__url, "_blank"); }
+
+            books[0][0].click(function(){ open_book_page(books[0][1]) })
+            books[1][0].click(function(){ open_book_page(books[1][1]) })
+            books[2][0].click(function(){ open_book_page(books[2][1]) })
+            books[3][0].click(function(){ open_book_page(books[3][1]) })
+            books[4][0].click(function(){ open_book_page(books[4][1]) })
+            books[5][0].click(function(){ open_book_page(books[5][1]) })
+
+        })
+
+    </script>
+
+</html>
