@@ -24,9 +24,13 @@ body {
     flex-direction: column;
     overflow-x: clip;
     overflow-clip-margin: 0.5rem;
-
     background-image: url("resources/bg_bottom.png");
     background-size: contain;
+
+    @media (max-width: 412px) {
+        overflow-x: hidden;
+        overflow-clip-margin: 0;
+    }
 }
 
 .__web_background {
@@ -40,15 +44,30 @@ body {
         width: 100%;
         margin: auto;
     }
+
+    @media (max-width:412px) {
+        width: 99vw;
+    }
 }
 
 header {
     margin-top: 20px;
     margin-bottom: 30px;
 
+    width: 100%;
+
+    overflow-x: hidden;
+
     @media (max-width: 1206px) {
         & .header_img {
             width: 100%;
+        }
+    }
+
+    @media (max-width:412px) {
+        & .header_img {
+            margin-left: -200px;
+            width: 800px;
         }
     }
 }
@@ -93,6 +112,26 @@ main {
             width: 520px;
             filter: drop-shadow(0 0 10px yellow);
             animation: none;
+        }
+
+        @media (max-width: 412px) {
+            & h1 {
+                font-size: 25px;
+            }
+
+            & h2 {
+                font-size: 28px;
+            }
+
+            & .book_icon {
+                animation: goIn_smaller 2s ease-in-out infinite alternate;
+            }
+
+            & .buy_new_book {
+                animation: goIn_buy_smaller 2s ease-in-out infinite alternate;
+            }
+
+            margin-bottom: -200px;
         }
     }
 
@@ -169,13 +208,45 @@ main {
             width: 50%;
             height: 100%;
         }
+
+        & .descricao {
+            margin-top: -20px;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        @media (max-width: 412px) {
+            margin-top: -40px;
+
+            & .titulo {
+                width: 400px;
+            }
+
+            & .descricao {
+                font-size: 20px;
+            }
+
+            & .livros {
+                height: 100%;
+                width: 100%;
+                margin-top: -80px;
+                margin-left: -80px;
+    
+                & .livro {
+                    transition: 100ms ease;
+                    margin-right: -160px;
+                    transform: scale(0.7);
+                    z-index: 2;
+                }
+
+                & .livro_solo {
+                    margin-top: 80px;
+                }
+            }
+        }
     }
 
-    & .descricao {
-        margin-top: -20px;
-        margin-bottom: 30px;
-        font-size: 32px;
-    }
+   
 
     & .biografia {
         margin: auto;
@@ -186,6 +257,16 @@ main {
         @media (max-width: 1206px) {
             margin-top: -40px;
             transform: scale(0.8);
+        }
+
+        @media (max-width: 412px) {
+            & h1 { 
+                font-size: 64px;
+                text-decoration: underline;
+                filter: drop-shadow(0 0 10px gold);
+                color: gold; 
+                margin-bottom: -100px;
+            }
         }
 
         & .bio {
@@ -233,6 +314,35 @@ main {
                     width: 400px;
                 }
             }
+
+            @media (max-width: 412px) {
+                width: 100%;
+
+                margin-top: 50px;
+
+                background-size: 500px;
+
+                transform: scale(1.2);
+
+                & .inner_bio {
+
+                    transform: translate(0px, 20px) scale(0.8);
+                    width: 412px;
+
+                    & .foto {
+                        width: 340px;
+                    }
+
+                    & h1 {
+                        font-size: 35px;
+                    }
+    
+                    & p {
+                        width: 100%;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
         }
     }
 
@@ -275,6 +385,15 @@ footer {
             filter: drop-shadow(0 0 15px rgb(91, 126, 167));
             transform: scale(1.15) rotate(0deg);
         }
+
+        @media (max-width: 412px) {
+            width: 100%;
+
+            & .sm {
+                margin-right: 10px;
+                width: 80px;
+            }
+        }
     }
 }
 
@@ -292,6 +411,19 @@ footer {
     }
 }
 
+@keyframes goIn_smaller {
+    from {
+        margin-top: -80px;
+        transform: scale(0.7);
+    }
+
+    to {
+        margin-top: -85px;
+        transform: scale(.72);
+        filter: drop-shadow(0 0 10000px lightblue);
+    }
+}
+
 @keyframes goIn_buy {
     from {
         margin-top: -120px;
@@ -301,5 +433,17 @@ footer {
     to {
         margin-top: -120px;
         transform: scale(1.02);
+    }
+}
+
+@keyframes goIn_buy_smaller {
+    from {
+        margin-top: -190px;
+        transform: scale(0.7);
+    }
+
+    to {
+        margin-top: -190px;
+        transform: scale(0.72);
     }
 }
