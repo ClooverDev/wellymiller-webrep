@@ -235,12 +235,28 @@ main {
                 & .livro {
                     transition: 100ms ease;
                     margin-right: -160px;
-                    transform: scale(0.7);
+                    transform: scale(.68);
                     z-index: 2;
+                }
+
+                & .livro:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(0.6);
+                    margin-right: -150px;
+                    z-index: 3;
                 }
 
                 & .livro_solo {
                     margin-top: 80px;
+                    transform: scale(1);
+                }
+
+                & .livro_solo:hover {
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 10px gold);
+                    transform: scale(0.9);
+                    z-index: 3;
                 }
             }
         }
