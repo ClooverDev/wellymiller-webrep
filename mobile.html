@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Welly Miller </title>
+		<link rel="icon" type="image/x-icon" href="icon.ico">
+		
+		<link href="https://fonts.cdnfonts.com/css/i-imbang" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet">
+		<link href="https://fonts.cdnfonts.com/css/mali-2" rel="stylesheet">
+		
+		<style>
+			
+			* {
+				font-family: 'Alvifont', sans-serif;
+				color: white;
+				z-index: 0;
+				
+				text-align: center;
+			}
+			
+			body {
+				display: flex;
+				flex-direction: column;
+				
+				align-items: center;
+				justify-content: center;
+			}
+			
+			.header {
+				width: 350px;
+				height: 130px;
+				overflow: hidden;
+			}
+			
+			.header img {
+				transform-origin: 50% 50%;
+				
+				height: 100%;
+				
+				transform: translateX(-230px);
+			}
+			
+			@keyframes corner_to_corner {
+				from {
+					transform: translate(-5000px, -5000px);
+				}
+				
+				to {
+					transform: translate(0, 0);
+				}
+			}
+			
+			h2 { filter: drop-shadow(0 0 3px yellow); }
+			h3 { filter: drop-shadow(0 0 3px yellow); }
+			
+			.book_preview {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				
+				animation: button_expand_slowly 3.5s ease infinite alternate;
+			}
+			
+			.divisor {
+				width: 360px;
+				height: 140px;
+				background-position: 50% 50%;
+				background-size: cover;
+				background-image: url(resources/divider.png);
+			}
+			
+			.divisor_bright {
+				transform: translateX(-50px);
+			
+				width: 122.7%;
+				height: 10px;
+				
+				filter: blur(2px);
+				
+				margin-top: -15px;
+				margin-bottom: 20px;
+				
+				background-position: 50% 50%;
+				background-size: cover;
+				background-image: url(resources/linha.png);
+			}
+			
+			.parent_book {
+				width: 360px;
+				height: 380px;
+				
+				justify-content: center;
+				align-items: center;
+				display: flex;
+			}
+			
+			.child_book {
+				width: 200px;
+				height: 360px;
+			}
+			
+			.book_image {
+				filter: drop-shadow(0 0 6px white);
+			}
+			
+			.bio {
+				width: 360px;
+				height: 730px;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				
+				overflow: hidden;
+			}
+			
+			.bio_inner {
+				background-image: url(resources/black_paper_larger.png);
+				background-size: cover;
+				background-position: 40% 50%;
+				
+				width: 360px;
+				height: 690px;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			#book_4_buy_alt {
+				animation: button_expand_slowly 5s ease infinite alternate;
+			}
+			
+			@keyframes button_expand_slowly {
+				from {
+					transform: scale(1);
+					filter: drop-shadow(0 0 2px red);
+				}
+				
+				to {
+					transform: scale(1.05);
+					filter: drop-shadow(0 0 10px blue);
+				}
+			}
+			
+			.social_media {
+				height: 120px;
+				width: 380px;
+			}
+			
+			.social_media_bg  {
+				z-index: -1;
+			
+				width: 380px;
+				height: 160px;
+				filter: blur(20px);
+				position: absolute;
+			}
+			
+			.social_media_bg img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.social_medias {
+				transform: translateY(25px);
+				z-index: 1;
+			}
+			
+			.social_medias img {
+				width: 70px;
+				margin-right: 10px;
+				filter: drop-shadow(0 0 8px white);
+			}
+			
+			.scrollable_bg {
+				top: 0;
+				left: 0;
+				
+				width: 101vw;
+				height: 3050px;
+				position: absolute;
+				overflow: hidden;
+			}
+			
+			#bg1 {
+				transform: translateX(-660px);
+				z-index: -1;
+				
+				margin-bottom: -32px;
+				
+				position: relative;
+			}
+			
+			#bg2 {
+				transform: translateX(-660px);
+				z-index: -2;
+				
+				position: relative;
+			
+				margin-top: -8px;
+				margin-bottom: -30px;
+			}
+		
+		</style>
+	</head>
+	
+	<body bgColor="#2b2b2b">
+		<div class="scrollable_bg">
+			<img id="bg1" src="resources/bg_1_alt.png">
+			<img id="bg2" src="resources/bg_5.png">
+			<img id="bg2" src="resources/bg_5.png">
+			<img id="bg2" src="resources/bg_5.png">
+			<img id="bg2" src="resources/bg_5.png">
+			<img id="bg2" src="resources/bg_5.png">
+			<img id="bg2" src="resources/bg_5.png">
+			
+		</div>
+	
+		<div class="header">
+			<img src="resources/header.png" style="width: 800px;">
+		</div>
+		
+		<div class="new_book" style="margin-top: -10px; margin-bottom: -15px;">
+			<h3> NOVIDADE! </h3>
+			<h2 style="color: yellow; font-size: 23px; margin-top: -15px;"> A MINHA NOITE ESTRELADA </h2>
+			
+			<div class="book_preview" style="margin-top: -10px;">
+				<img style="width:160px;" src="resources/capas/a_minha_noite_estrelada_3d_2.png">
+				<img id="book_4_buy_alt" style="width: 250px; margin-top: -69px; " src="resources/comprar_agora.png">
+			</div>
+		</div>
+		
+		<div style="margin-top:20px; margin-bottom: -20px;" class="divisor"></div>
+		
+		<div class="books">
+			<img style="width: 350px;" src="resources/dentrodasparedes.png">
+			<h3 style="margin-top: -10px; margin-bottom: -3px; font-size: 15px;"> TOQUE NAS IMAGENS PARA COMPRAR </h3>
+			
+			<div class="parent_book">
+			
+				<div class="child_book" style="margin-right: 30px;">
+					<img style="width: 120px; z-index: 0;" src="resources/logos/mobile/aqp.png">
+					<img id="book_1_buy" class="book_image" style="width: 120px; margin-top: -15px; z-index: 1;" src="resources/capas/a_quarta_parede_3d.png">
+				</div>
+				
+				<div class="child_book">
+					<img style="width: 120px; z-index: 0;" src="resources/logos/mobile/addv.png">
+					
+					<div style="display: flex;">
+						<img id="book_2_buy_c" class="book_image" style="width: 120px; margin-top: -15px; z-index: 1;" src="resources/capas/a_dimensao_do_vidro_3d.png">
+						<img id="book_2_buy_pb" class="book_image" style="width: 120px; margin-top: -15px; margin-left: -60px; z-index: 1;" src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="parent_book">
+			
+				<div class="child_book">
+					<img style="width: 120px; transform: scale(1.6); z-index: 0;" src="resources/logos/mobile/cprd.png">
+					<img id="book_4_buy" class="book_image" style="width: 120px; transform: scale(1.2); margin-top: 15px; z-index: 1;" src="resources/capas/contra_parede_3d.png">
+				</div>
+			
+			</div>
+			
+			<div class="divisor_bright"></div>
+			
+			<img style="width: 350px;" src="resources/outroslivros.png">
+			<h3 style="margin-top: -10px; margin-bottom: -3px; font-size: 15px;"> TOQUE NAS IMAGENS PARA COMPRAR </h3>
+			
+			<div class="parent_book" style="margin-top: 20px;">
+			
+				<div class="child_book" style="margin-top: 35px;">
+					<img style="width: 120px; transform: scale(2);" src="resources/logos/ctd.png">
+					<img id="book_3_buy" class="book_image" style="width: 120px; margin-top: 69px; transform: scale(1.4);" src="resources/capas/candy_the_dog_3d.png">
+				</div>
+			
+			</div>
+			
+		</div>
+		
+		<div style="margin-bottom: 20px; margin-top: 20px; transform: translateY(25px);" class="divisor"></div>
+			
+		<div class="bio" style="margin-top: -80px; transform: translateY(50px);">
+			<img style="width: 300px; margin-bottom: -120px; z-index: 1; transform: translateY(5px)" src="resources/foto.png">
+			<div class="bio_inner" style="margin-top: 25px;">
+				<h3 style="color: yellow; font-size: 25px; margin-top:50px; width: 80%; text-align: right;"> Isabelly Rodrigues </h3>
+				<p style="margin-top: -25px; filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25)); width: 75%; font-size: 13px;  font-family: 'Mali', sans-serif; text-align: left; transform: translateX(-12px);">
+					Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, foi onde sua jornada mudou para melhor! <br><br>
+
+					<span style="color:lightgray; font-family: 'Mali', sans-serif;">Aos 16 anos, Isabelly é uma jovem com um longo caminho, mas ela procura escrever vários livros!, ela acredita em suas habilidades e se esforça para alcançar seus sonhos! </span>
+				</p>
+			
+			</div>
+		</div>
+		
+		<div class="social_media" style="transform:translateY(55px);">
+			<div class="social_media_bg">
+				<img src="resources/bright_divider_y.png">
+			</div>
+			
+			<div class="social_medias">
+				<img id="sm_bluesky" src="resources/socialmedia/bluesky.png">
+				<img id="sm_twitter" src="resources/socialmedia/twitter.png">
+				<img id="sm_tiktok" src="resources/socialmedia/tiktok.png">
+				<img id="sm_instagram" src="resources/socialmedia/instagram.png">
+			</div>
+		</div>
+	<body>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
+	<script>
+		
+		$(document).ready(function(){
+		
+			$(book4_alt).on("click", function() {
+				window.open("livros/aminhanoiteestrelada", "_blank")
+			})
+			
+			const book1 = "#book_1_buy"; // A QUARTA PAREDE
+			const book2COL = "#book_2_buy_c"; // A DIMENSAO DO VIDRO (COLORIDO)
+			const book2PB = "#book_2_buy_pb"; // A DIMENSAO DO VIDRO (PRETO E BRANCO)
+			const book3 = "#book_3_buy"; // CANDY THE DOG
+			const book4 = "#book_4_buy"; // CONTRA PAREDE
+			const book4_alt = "#book_4_buy_alt"; // CONTRA PAREDE
+			
+			$(book1).on("click", function() {
+				window.open("livros/aquartaparede", "_blank")
+			})
+			
+			$(book2COL).on("click", function() {
+				window.open("livros/adimensaodovidro", "_blank")
+			})
+			
+			$(book2PB).on("click", function() {
+				window.open("livros/preto-e-branco/adimensaodovidro", "_blank")
+			})
+			
+			$(book3).on("click", function() {
+				window.open("livros/candythedog", "_blank")
+			})
+			
+			$(book4).on("click", function() {
+				window.open("livros/contraparede", "_blank")
+			})
+			
+			// SOCIAL MEDIAS \\
+			const social_bluesky = "#sm_bluesky";
+			const social_twitter = "#sm_twitter";
+			const social_tiktok = "#sm_tiktok";
+			const social_instagram = "#sm_instagram";
+			
+			$(social_bluesky).on("click", function(){
+				window.open("https://bsky.app/profile/bwelly.bsky.social", "_blank");
+			})
+			
+			$(social_twitter).on('click', function(){
+				window.open("https://x.com/Bey7w7", "_blank");
+			})
+			
+			$(social_tiktok).on("click", function(){
+				window.open("https://www.tiktok.com/@c4uaki?_t=ZM-8saAPetwrYL&_r=1", "_blank");
+			})
+			
+			$(social_instagram).on('click', function(){
+				window.open("https://www.instagram.com/wellymiller._/", "_blank");
+			})
+		})
+		
+		function isMobile() {
+		  const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+		  return regex.test(navigator.userAgent);
+		}
+
+		if (isMobile()) {
+			console.log("user is on mobile!");
+			
+		} else {
+			console.log("user is on desktop!");
+			
+			window.top.location = "https://wm.clooverlandstudios.com";
+		}
+	
+	</script>
+
+</html>
