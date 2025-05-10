@@ -92,7 +92,6 @@ main {
             color: yellow;
             font-size: 46px;
             filter: drop-shadow(0 0 10px gold);
-            text-decoration: underline;
         };
 
         & .book_icon {
@@ -282,7 +281,6 @@ main {
 
             & h1 { 
                 font-size: 64px;
-                text-decoration: underline;
                 filter: drop-shadow(0 0 10px gold);
                 color: gold; 
                 margin-bottom: -100px;
