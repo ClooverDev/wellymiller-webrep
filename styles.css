@@ -27,7 +27,7 @@ body {
     background-image: url("resources/bg_bottom.png");
     background-size: contain;
 
-    @media (max-width: 412px) {
+    @media (max-width: 480px) {
         overflow-x: hidden;
         overflow-clip-margin: 0;
     }
@@ -114,7 +114,7 @@ main {
             animation: none;
         }
 
-        @media (max-width: 412px) {
+        @media (max-width: 480px) {
             & h1 {
                 font-size: 25px;
             }
@@ -215,7 +215,7 @@ main {
             font-size: 32px;
         }
 
-        @media (max-width: 412px) {
+        @media (max-width: 480px) {
             margin-top: -40px;
 
             & .titulo {
@@ -269,13 +269,15 @@ main {
         margin-top: 40px;
         width: 100%;
         height: 700px;
+        margin-bottom: 80px;
+
 
         @media (max-width: 1206px) {
             margin-top: -40px;
             transform: scale(0.8);
         }
 
-        @media (max-width: 412px) {
+        @media (max-width: 480px) {
             margin-bottom: -100px;
 
             & h1 { 
@@ -314,8 +316,8 @@ main {
     
                 & p {
                     margin: auto;
-                    width: 35%;
-                    font-size: 1.3rem;
+                    width: 600px;
+                    font-size: 20px;
                     font-family: 'Mali', sans-serif;
 
                     @media (max-width:1335px) {
@@ -332,8 +334,8 @@ main {
                     width: 400px;
                 }
             }
-
-            @media (max-width: 412px) {
+            
+            @media (max-width: 480px) {
                 width: 100%;
 
                 margin-top: 50px;
@@ -344,8 +346,8 @@ main {
 
                 & .inner_bio {
 
-                    transform: translate(0px, 20px) scale(0.8);
-                    width: 412px;
+                    transform: translate(0, 20px) scale(0.8);
+                    width: 100%;
 
                     & .foto {
                         width: 340px;
@@ -357,7 +359,7 @@ main {
     
                     & p {
                         width: 100%;
-                        font-size: 0.9rem;
+                        font-size: .9rem;
                     }
                 }
             }
@@ -382,7 +384,7 @@ footer {
         margin-top: 150px;
     }
 
-    @media (max-width: 412px) {
+    @media (max-width: 480px) {
         height: 170px;
     }
 
@@ -408,7 +410,7 @@ footer {
             transform: scale(1.15) rotate(0deg);
         }
 
-        @media (max-width: 412px) {
+        @media (max-width: 480px) {
             width: 100%;
 
             & .sm {
