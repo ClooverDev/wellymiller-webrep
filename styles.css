@@ -27,7 +27,7 @@ body {
     background-image: url("resources/bg_bottom.png");
     background-size: contain;
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
         overflow-x: hidden;
         overflow-clip-margin: 0;
     }
@@ -114,7 +114,7 @@ main {
             animation: none;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             & h1 {
                 font-size: 25px;
             }
@@ -215,7 +215,7 @@ main {
             font-size: 32px;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             margin-top: -40px;
 
             & .titulo {
@@ -277,7 +277,7 @@ main {
             transform: scale(0.8);
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             margin-bottom: -100px;
 
             & h1 { 
@@ -334,8 +334,8 @@ main {
                     width: 400px;
                 }
             }
-            
-            @media (max-width: 480px) {
+
+            @media (max-width: 600px) {
                 width: 100%;
 
                 margin-top: 50px;
@@ -384,7 +384,7 @@ footer {
         margin-top: 150px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
         height: 170px;
     }
 
@@ -410,7 +410,7 @@ footer {
             transform: scale(1.15) rotate(0deg);
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             width: 100%;
 
             & .sm {
