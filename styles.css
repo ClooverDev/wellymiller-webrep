@@ -268,7 +268,14 @@ main {
         margin-top: 40px;
         width: 100%;
         height: 700px;
-        margin-bottom: 80px;
+        margin-bottom: 140px;
+
+        & h1 { 
+            font-size: 64px;
+            filter: drop-shadow(0 0 10px gold);
+            color: gold; 
+            margin-bottom: 50px;
+        }
 
 
         @media (max-width: 1206px) {
@@ -356,7 +363,7 @@ main {
                     }
     
                     & p {
-                        width: 100%;
+                        width: 80%;
                         font-size: .9rem;
                     }
                 }
