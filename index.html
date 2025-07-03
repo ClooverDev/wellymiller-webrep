@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <link href="https://fonts.cdnfonts.com/css/alvifont" rel="stylesheet"> 
+        <link href="https://fonts.cdnfonts.com/css/mali" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/morning-coffee" rel="stylesheet">
+
+        <title> Estante da Welly Miller </title>
+
+        <link rel="icon" type="image/x-icon" href="https://wm.clooverlandstudios.com/icon.ico">
+
+        <style>
+
+            * {
+                color: white;
+                margin: 0;
+                padding: 0;
+                user-select: none;
+            }
+
+            body {
+                background-color: gray;
+            }
+
+            h3, h1 {
+                font-family: 'Alvifont', sans-serif;
+                filter: drop-shadow(0 0 10px gold);
+            }
+
+            #HEADER-IMG-MOB { display:none; visibility: hidden; }
+
+            @media (max-width: 750px) {
+                #HEADER-IMG { display:none; visibility: hidden; }
+                #HEADER-IMG-MOB { display:block; visibility: visible; }
+            }
+
+            #BOOK-COVER {
+                animation: bookAnim 3s ease-in-out alternate infinite;
+            }
+            
+            @keyframes bookAnim {
+                from {
+                    filter: drop-shadow(0 0 0 white);
+                    transform: translateY(0);
+                }
+
+                to {
+                    filter: drop-shadow(0 0 400px gold);
+                    transform: translateY(-10px);
+                }
+            }
+
+            #COMPRAR-AGORA {
+                transition: 0.25s ease;
+                animation: btnAnim 3s ease-in-out alternate infinite;
+            }
+
+            #COMPRAR-AGORA:hover {
+                cursor: pointer;
+                filter: drop-shadow(0 0 20px gold);
+                transform: scale(1.05);
+                animation: none;
+            }
+
+            #COMPRAR-AGORA:active {
+                cursor: pointer;
+                filter: drop-shadow(0 0 20px cyan);
+                transform: scale(1.05);
+                animation: none;
+            }
+
+            .BOOK-CHILD {
+                width: 200px;
+                margin-right: -80px;
+                margin-left: 0;
+                transition: .15s ease;
+            }
+
+            .BOOK-CHILD:hover {
+                cursor: pointer;
+                margin-right: 0;
+                margin-left: 10px;
+
+                filter: drop-shadow(0 0 10px gold);
+            }
+
+            .BOOK-CHILD-SOLO {
+                width: 200px;
+                margin-left: 80px;
+                transition: .15s ease;
+            }
+
+            .BOOK-CHILD-SOLO:hover {
+                cursor: pointer;
+                transform: scale(1.025);
+
+                filter: drop-shadow(0 0 10px gold);
+            }
+
+            .TEXT-CONTAINER {
+                width: 500px;
+            }
+
+            .BIO {
+                background-image: url('resources/black_paper.png');
+            }
+
+            .SM-CHILD {
+                margin-right: 15px;
+                transition: .1s ease;
+            }
+
+            .SM-CHILD:hover {
+                filter: drop-shadow(0 0 10px rgb(31, 31, 31));
+                cursor: pointer;
+                transform: scale(1.08) rotate(5deg);
+            }
+
+            .SM-CHILD:active {
+                filter: drop-shadow(0 0 10px cyan);
+                cursor: pointer;
+                transform: scale(1.08) rotate(5deg);
+            }
+
+            .BACKGROUND {
+                width: 100%;
+                height: 100%;
+
+                & img {
+                    width: 100%;
+                    margin-bottom: -60px;
+                }
+            }
+
+            @media (max-width: 750px) {
+                .BOOK-CHILD {
+                    width: 150px;
+                }
+
+                .TEXT-CONTAINER {
+                    width: 400px;
+                }
+
+                .BACKGROUND {
+                    margin-left: -1700px;
+                    width: 500%;
+                }
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="BACKGROUND position-fixed" style="z-index: -1; overflow: hidden;">
+            <img src="resources/bg.png">
+            
+        </div>
+
+        <main class="d-flex flex-column justify-content-center" style="align-items: center; overflow-x: hidden">
+
+            <header class="d-flex justify-content-center mt-5" style="align-items: center;">
+
+                <img id="HEADER-IMG" src='resources/header.png' width=1200 class="img-fluid">
+                <img id="HEADER-IMG-MOB" src='resources/header.png' width=1000>
+
+            </header>
+
+            <div class="NEW-BOOK container-fluid d-flex flex-column justify-content-center" style='align-items: center'>
+
+                <h3 class="h1 text-center mt-5" style="font-size: 2rem;"> EM BREVE! </h3>
+                <h1 class="h1 text-center mt-3" style="font-size: 3rem; color: yellow; display: block"> Rainha Valkyrja </h1>
+
+                <img id="BOOK-COVER" width=200 class="img-fluid" src="resources/capas/secret_3d.png">
+
+                <img id="COMPRAR-AGORA" style="display: none" width=500 src="resources/comprar_agora.png" class="img-fluid mb-5">
+            </div>
+
+            <div class="DIVISORY"><img src='resources/divider.png' width=1700></div>
+
+            <div class="BOOKSHELF container-fluid d-flex flex-column justify-content-center" style="align-items: center;">
+
+                <div class="MAIN-BOOKS container-fluid d-flex flex-column justify-content-center" style="align-items: center;">
+
+                    <img src="resources/dentrodasparedes.png" class="img-fluid" width=600>
+
+                    <h1 class="h1 text-center" style="font-family: 'Mali SemiBold', sans-serif; filter: drop-shadow(0 3px 0 black); font-size: 1.5rem;"> Livros de poesias sobre romance, tragédias e decepções amorosas. </h1>
+
+                    <div class="container-fluid d-flex justify-content-center" style="align-items: center; margin-left: -40px;">
+
+                        <img class="BOOK-CHILD img-fluid" style="z-index: 1" id="BOOK_AQUARTAPAREDE" src="resources/capas/a_quarta_parede_3d.png">
+                        <img class="BOOK-CHILD img-fluid" style="z-index: 2" id="BOOK_ADIMENSAODOVIDRO" src="resources/capas/a_dimensao_do_vidro_3d.png">
+                        <img class="BOOK-CHILD img-fluid" style="z-index: 3" id="BOOK_ADIMENSAODOVIDRO-PB" src="resources/capas/a_dimensao_do_vidro_3d_pb.png">
+                        <img class="BOOK-CHILD img-fluid" style="z-index: 4" id="BOOK_CONTRAPAREDE" src="resources/capas/contra_parede_3d.png">
+
+                    </div>
+
+                </div>
+
+                <div class="OTHER-BOOKS mt-5 container-fluid d-flex flex-column justify-content-center" style="align-items: center;">
+
+                    <img src="resources/outroslivros.png" class="img-fluid" width=600>
+
+                    <h1 class="h1 text-center" style="font-family: 'Mali SemiBold', sans-serif; filter: drop-shadow(0 3px 0 black); font-size: 1.5rem;"> Livros de poesias sobre romance, tragédias e decepções amorosas. </h1>
+
+                    <div class="container-fluid d-flex justify-content-center" style="align-items: center; margin-left: -40px;">
+
+                        <img class="BOOK-CHILD-SOLO img-fluid" style="z-index: 1" id="BOOK_MINHANOITEESTRELADA" src="resources/capas/a_minha_noite_estrelada_3d.png">
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="DIVISORY mt-5 mb-5"><img src='resources/divider.png' width=1700></div>
+
+            <div class="BIOGRAPHY container-fluid d-flex justify-content-center" style="align-items: center; margin-bottom: 95px;">
+
+                <div class="BIO container-fluid w-100 d-flex flex-column justify-content-start" style="filter: drop-shadow(0 0 40px black); align-items: center; background-repeat: no-repeat; background-position: 50% 50%; height: 700px;">
+                    <div class="container-fluid d-flex flex-column justify-content-center" style="transform: translateY(-60px); align-items: center;">
+                        <img src="resources/foto.png" class="img-fluid" width=350>
+
+                        <div class="TEXT-CONTAINER container-fluid">
+                            <h1 class="h1 text-center" style="font-family: 'Mali SemiBold', sans-serif; filter: drop-shadow(0 0 5px gold); font-size: 2rem; color: gold; font-family: 'Morning Coffee', sans-serif;"> ISABELLY RODRIGUES </h1>
+
+                            <p class="p text-center">
+
+                                Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por 
+                                livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em 
+                                se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar 
+                                seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance 
+                                chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, 
+                                foi onde sua jornada mudou para melhor! 
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer class='container-fluid w-100 d-flex justify-content-center fixed-bottom' style="align-items: center; background-color: rgb(34, 34, 34); border-top: 10px solid rgb(22, 22, 22)">
+
+                <div class="container-fluid w-100 d-flex justify-content-center" style="transform: translateY(-20px)">
+
+                    <img class='SM-CHILD img-fluid' id="SM-INSTA" src="resources/socialmedia/instagram.png" width=90>
+                    <img class='SM-CHILD img-fluid' id="SM-TWX" src="resources/socialmedia/twitter.png" width=90>
+                    <img class='SM-CHILD img-fluid' id="SM-TTK" src="resources/socialmedia/tiktok.png" width=90>
+                    <img class='SM-CHILD img-fluid' id="SM-BSK" src="resources/socialmedia/bluesky.png" width=90>
+
+                </div>
+
+            </footer>
+
+        </main>
+        
+    </body>
+
+    <script>
+        $(document).ready(function(){
+
+            const BOOKS = {
+                "A QUARTA PAREDE" : $("#BOOK_AQUARTAPAREDE"),
+                "A DIMENSÃO DO VIDRO" : $("#BOOK_ADIMENSAODOVIDRO"),
+                "A DIMENSÃO DO VIDRO - PB" : $("#BOOK_ADIMENSAODOVIDRO-PB"),
+                "CONTRA-PAREDE" : $("#BOOK_CONTRAPAREDE"),
+                "A MINHA NOITE ESTRELADA" : $("#BOOK_MINHANOITEESTRELADA")
+            }
+
+            const hostname = window.location.hostname;
+            const website = "wm.clooverlandstudios.com"
+
+            function open_book(URL, isBW) {
+                console.log('Opening book...')
+
+                if (hostname == website) {
+                    if (isBW) {
+                        window.open("https://"+website+"/livros/preto-e-branco/"+URL, "_blank")
+                    } else {
+                        window.open("https://"+website+"/livros/"+URL, "_blank")
+                    }
+
+                } else {
+                    if (isBW) {
+                        window.open("livros/preto-e-branco/"+URL+".html", "_blank")
+                    } else {
+                        window.open("livros/"+URL+".html", "_blank")
+                    }
+                }
+            }
+
+
+            BOOKS["A QUARTA PAREDE"].click(function(){
+                open_book("aquartaparede", false);
+            })
+
+            BOOKS["A DIMENSÃO DO VIDRO"].click(function(){
+                open_book("adimensaodovidro", false);
+            })
+
+            BOOKS["A DIMENSÃO DO VIDRO - PB"].click(function(){
+                open_book("adimensaodovidro", true);
+            })
+
+            BOOKS["CONTRA-PAREDE"].click(function(){
+                open_book("contraparede", false)
+            })
+
+            BOOKS["A MINHA NOITE ESTRELADA"].click(function(){
+                open_book("aminhanoiteestrelada", false);
+            })
+
+            //////////////////////////////////////////////////////////////////////////////////////
+
+            function open_url(URL) {
+                window.open(URL, "_blank")
+            }
+
+            const SOCIALMEDIAS = {
+                "INSTAGRAM" : $("#SM-INSTA"),
+                "TWITTER/X" : $("#SM-TWX"),
+                "TIKTOK" : $("#SM-TTK"),
+                "BLUESKY" : $("#SM-BSK"),
+            }
+
+            const LINKS = {
+                "INSTAGRAM" : "https://www.instagram.com/welly.escritora/",
+                "TWITTER/X" : "https://x.com/Bey7w7",
+                "TIKTOK" : "https://www.tiktok.com/@wellymi7",
+                "BLUESKY" : "https://bsky.app/profile/bwelly.bsky.social",
+            }
+
+            SOCIALMEDIAS["INSTAGRAM"].click(function(){
+                open_url(LINKS["INSTAGRAM"]);
+            })
+
+            SOCIALMEDIAS["TWITTER/X"].click(function(){
+                open_url(LINKS["TWITTER/X"]);
+            })
+
+            SOCIALMEDIAS["TIKTOK"].click(function(){
+                open_url(LINKS["TIKTOK"]);
+            })
+
+            SOCIALMEDIAS["BLUESKY"].click(function(){
+                open_url(LINKS["BLUESKY"]);
+            })
+
+        })
+
+    </script>
+
+</html>
