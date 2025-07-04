@@ -1,0 +1,142 @@
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: gray;
+}
+
+h3, h1 {
+    font-family: 'Alvifont', sans-serif;
+    filter: drop-shadow(0 0 10px gold);
+}
+
+#HEADER-IMG-MOB { display:none; visibility: hidden; }
+
+@media (max-width: 750px) {
+    #HEADER-IMG { display:none; visibility: hidden; }
+    #HEADER-IMG-MOB { display:block; visibility: visible; }
+}
+
+#BOOK-COVER {
+    animation: bookAnim 3s ease-in-out alternate infinite;
+}
+
+@keyframes bookAnim {
+    from {
+        filter: drop-shadow(0 0 0 white);
+        transform: translateY(0);
+    }
+
+    to {
+        filter: drop-shadow(0 0 400px gold);
+        transform: translateY(-10px);
+    }
+}
+
+#COMPRAR-AGORA {
+    transition: 0.25s ease;
+    animation: btnAnim 3s ease-in-out alternate infinite;
+}
+
+#COMPRAR-AGORA:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px gold);
+    transform: scale(1.05);
+    animation: none;
+}
+
+#COMPRAR-AGORA:active {
+    cursor: pointer;
+    filter: drop-shadow(0 0 20px cyan);
+    transform: scale(1.05);
+    animation: none;
+}
+
+.BOOK-CHILD {
+    width: 200px;
+    margin-right: -120px;
+    margin-left: 0;
+    transition: .15s ease;
+    filter: drop-shadow(-5px 5px 10px black);
+    transform: rotateY(50deg);
+}
+
+.BOOK-CHILD:hover {
+    cursor: pointer;
+    margin-right: 0;
+    margin-left: 10px;
+
+    filter: drop-shadow(0 0 10px gold);
+
+    transform: rotateY(0) rotate(-5deg);
+}
+
+.BOOK-CHILD-SOLO {
+    width: 200px;
+    margin-left: 80px;
+    transition: .15s ease;
+}
+
+.BOOK-CHILD-SOLO:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.SM-CHILD {
+    margin-right: 15px;
+    transition: .1s ease;
+}
+
+.SM-CHILD:hover {
+    filter: drop-shadow(0 0 10px rgb(31, 31, 31));
+    cursor: pointer;
+    transform: scale(1.08) translateY(-10px) rotateY(-35deg);
+}
+
+.SM-CHILD:active {
+    filter: drop-shadow(0 0 10px cyan);
+    cursor: pointer;
+    transform: scale(1.08) rotate(5deg);
+}
+
+.BACKGROUND {
+    width: 100%;
+    height: 100%;
+
+    & img {
+        width: 100%;
+        margin-bottom: -60px;
+    }
+}
+
+.BIO {
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 20% 10%);
+    background-image: url('resources/black_paper.png');
+    background-repeat: no-repeat;
+    background-size: 300%;
+    background-position: 50% 50%;
+    border: 8px inset rgb(10, 10, 10);
+    width: 50%;
+    background-color: rgba(41, 41, 41, 0.75);
+}
+
+@media (max-width: 550px) {
+    .BOOK-CHILD {
+        width: 150px;
+    }
+
+    .BACKGROUND {
+        margin-left: -100px;
+        width: 500%;
+    }
+
+    .BIO {
+        width: 100%;
+    }
+}

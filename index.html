@@ -21,150 +21,7 @@
 
         <link rel="icon" type="image/x-icon" href="https://wm.clooverlandstudios.com/icon.ico">
 
-        <style>
-
-            * {
-                color: white;
-                margin: 0;
-                padding: 0;
-                user-select: none;
-            }
-
-            body {
-                background-color: gray;
-            }
-
-            h3, h1 {
-                font-family: 'Alvifont', sans-serif;
-                filter: drop-shadow(0 0 10px gold);
-            }
-
-            #HEADER-IMG-MOB { display:none; visibility: hidden; }
-
-            @media (max-width: 750px) {
-                #HEADER-IMG { display:none; visibility: hidden; }
-                #HEADER-IMG-MOB { display:block; visibility: visible; }
-            }
-
-            #BOOK-COVER {
-                animation: bookAnim 3s ease-in-out alternate infinite;
-            }
-            
-            @keyframes bookAnim {
-                from {
-                    filter: drop-shadow(0 0 0 white);
-                    transform: translateY(0);
-                }
-
-                to {
-                    filter: drop-shadow(0 0 400px gold);
-                    transform: translateY(-10px);
-                }
-            }
-
-            #COMPRAR-AGORA {
-                transition: 0.25s ease;
-                animation: btnAnim 3s ease-in-out alternate infinite;
-            }
-
-            #COMPRAR-AGORA:hover {
-                cursor: pointer;
-                filter: drop-shadow(0 0 20px gold);
-                transform: scale(1.05);
-                animation: none;
-            }
-
-            #COMPRAR-AGORA:active {
-                cursor: pointer;
-                filter: drop-shadow(0 0 20px cyan);
-                transform: scale(1.05);
-                animation: none;
-            }
-
-            .BOOK-CHILD {
-                width: 200px;
-                margin-right: -120px;
-                margin-left: 0;
-                transition: .15s ease;
-                filter: drop-shadow(-5px 5px 10px black);
-                transform: rotateY(50deg);
-            }
-
-            .BOOK-CHILD:hover {
-                cursor: pointer;
-                margin-right: 0;
-                margin-left: 10px;
-
-                filter: drop-shadow(0 0 10px gold);
-
-                transform: rotateY(0) rotate(-5deg);
-            }
-
-            .BOOK-CHILD-SOLO {
-                width: 200px;
-                margin-left: 80px;
-                transition: .15s ease;
-            }
-
-            .BOOK-CHILD-SOLO:hover {
-                cursor: pointer;
-                transform: scale(1.025);
-
-                filter: drop-shadow(0 0 10px gold);
-            }
-
-            .TEXT-CONTAINER {
-                width: 500px;
-            }
-
-            .BIO {
-                background-image: url('resources/black_paper.png');
-            }
-
-            .SM-CHILD {
-                margin-right: 15px;
-                transition: .1s ease;
-            }
-
-            .SM-CHILD:hover {
-                filter: drop-shadow(0 0 10px rgb(31, 31, 31));
-                cursor: pointer;
-                transform: scale(1.08) translateY(-10px) rotateY(-35deg);
-            }
-
-            .SM-CHILD:active {
-                filter: drop-shadow(0 0 10px cyan);
-                cursor: pointer;
-                transform: scale(1.08) rotate(5deg);
-            }
-
-            .BACKGROUND {
-                width: 100%;
-                height: 100%;
-
-                & img {
-                    width: 100%;
-                    margin-bottom: -60px;
-                }
-            }
-
-            @media (max-width: 550px) {
-                .BOOK-CHILD {
-                    width: 150px;
-                }
-
-                .TEXT-CONTAINER {
-                    margin-left: -30px;
-                    width: 400px;
-                }
-
-                .BACKGROUND {
-                    margin-left: -100px;
-                    width: 500%;
-                }
-            }
-
-        </style>
+        <link href="style.css" rel="stylesheet">
 
     </head>
 
@@ -189,7 +46,7 @@
                 <h3 class="h1 text-center mt-5" style="font-size: 2rem;"> EM BREVE! </h3>
                 <h1 class="h1 text-center mt-3" style="font-size: 3rem; color: yellow; display: block"> Rainha Valkyrja </h1>
 
-                <img id="BOOK-COVER" width=200 class="img-fluid" src="resources/capas/secret_3d.png">
+                <img id="BOOK-COVER" width=300 class="img-fluid" src="resources/capas/rainha_valkyrja.png">
 
                 <img id="COMPRAR-AGORA" style="display: none" width=500 src="resources/comprar_agora.png" class="img-fluid mb-5">
             </div>
@@ -233,28 +90,24 @@
 
             <div class="DIVISORY mt-5 mb-5"><img src='resources/divider.png' width=1700></div>
 
-            <div class="BIOGRAPHY container-fluid d-flex justify-content-center" style="align-items: center; margin-bottom: 95px;">
+            <div class="BIO container-fluid d-flex flex-column justify-content-center" style="align-items: center; margin-bottom: 250px;">
 
-                <div class="BIO container-fluid w-100 d-flex flex-column justify-content-start" style="filter: drop-shadow(0 0 40px black); align-items: center; background-repeat: no-repeat; background-position: 50% 50%; height: 700px;">
-                    <div class="container-fluid d-flex flex-column justify-content-center" style="transform: translateY(-60px); align-items: center;">
-                        <img src="resources/foto.png" class="img-fluid" width=350>
+                <div class="container-md d-flex flex-column justify-content-start" style='align-items: center; height: auto;'>
 
-                        <div class="TEXT-CONTAINER container-fluid">
-                            <h1 class="h1 text-center" style="font-family: 'Mali SemiBold', sans-serif; filter: drop-shadow(0 0 5px gold); font-size: 2rem; color: gold; font-family: 'Morning Coffee', sans-serif;"> ISABELLY RODRIGUES </h1>
+                    <img class="img-fluid" src="resources/foto.png" width=400>
 
-                            <p class="p text-center">
+                    <h4 class="h4 text-center" style="font-family: 'Mali SemiBold', sans-serif; filter: drop-shadow(0 0 5px gold); font-size: 2rem; color: gold; font-family: 'Morning Coffee', sans-serif;"> ISABELLY RODRIGUES </h4>
 
-                                Isabelly, conhecida pelo seu nome artístico Welly Miller, é uma poeta, escritora e uma pessoa muito apaixonada por 
-                                livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em 
-                                se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar 
-                                seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance 
-                                chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, 
-                                foi onde sua jornada mudou para melhor! 
+                    <p class="p text-center w-100" style="font-size: clamp(1rem, 1.25rem, 1.5rem); font-family: 'Mali', sans-serif;">
 
-                            </p>
-                        </div>
+                        Isabelly, conhecida pelo seu nome artístico Welly Miller. É uma poeta, escritora e uma pessoa muito apaixonada por 
+                        livros. Durante sua infância ela explorava vários tipos de habilidades até alcançar seu caminho de hoje, já optou em 
+                        se tornar uma fotógrafa, que por fim não houve tanto progresso, até perceber seu dom na escrita, onde começou a trilhar 
+                        seu caminho como escritora de 2021 para os dias de hoje. Foi onde explorou vários temas e gêneros, onde gêneros de romance 
+                        chamou muito sua atenção, e virou um tema principal para os seus livros. Seu primeiro livro e o mais importante é A Quarta Parede, 
+                        foi onde sua jornada mudou para melhor! 
 
-                    </div>
+                    </p>
 
                 </div>
 
@@ -277,98 +130,6 @@
         
     </body>
 
-    <script>
-        $(document).ready(function(){
-
-            const BOOKS = {
-                "A QUARTA PAREDE" : $("#BOOK_AQUARTAPAREDE"),
-                "A DIMENSÃO DO VIDRO" : $("#BOOK_ADIMENSAODOVIDRO"),
-                "A DIMENSÃO DO VIDRO - PB" : $("#BOOK_ADIMENSAODOVIDRO-PB"),
-                "CONTRA-PAREDE" : $("#BOOK_CONTRAPAREDE"),
-                "A MINHA NOITE ESTRELADA" : $("#BOOK_MINHANOITEESTRELADA")
-            }
-
-            const hostname = window.location.hostname;
-            const website = "wm.clooverlandstudios.com"
-
-            function open_book(URL, isBW) {
-                console.log('Opening book...')
-
-                if (hostname == website) {
-                    if (isBW) {
-                        window.open("https://"+website+"/livros/preto-e-branco/"+URL, "_blank")
-                    } else {
-                        window.open("https://"+website+"/livros/"+URL, "_blank")
-                    }
-
-                } else {
-                    if (isBW) {
-                        window.open("livros/preto-e-branco/"+URL+".html", "_blank")
-                    } else {
-                        window.open("livros/"+URL+".html", "_blank")
-                    }
-                }
-            }
-
-
-            BOOKS["A QUARTA PAREDE"].click(function(){
-                open_book("aquartaparede", false);
-            })
-
-            BOOKS["A DIMENSÃO DO VIDRO"].click(function(){
-                open_book("adimensaodovidro", false);
-            })
-
-            BOOKS["A DIMENSÃO DO VIDRO - PB"].click(function(){
-                open_book("adimensaodovidro", true);
-            })
-
-            BOOKS["CONTRA-PAREDE"].click(function(){
-                open_book("contraparede", false)
-            })
-
-            BOOKS["A MINHA NOITE ESTRELADA"].click(function(){
-                open_book("aminhanoiteestrelada", false);
-            })
-
-            //////////////////////////////////////////////////////////////////////////////////////
-
-            function open_url(URL) {
-                window.open(URL, "_blank")
-            }
-
-            const SOCIALMEDIAS = {
-                "INSTAGRAM" : $("#SM-INSTA"),
-                "TWITTER/X" : $("#SM-TWX"),
-                "TIKTOK" : $("#SM-TTK"),
-                "BLUESKY" : $("#SM-BSK"),
-            }
-
-            const LINKS = {
-                "INSTAGRAM" : "https://www.instagram.com/welly.escritora/",
-                "TWITTER/X" : "https://x.com/Bey7w7",
-                "TIKTOK" : "https://www.tiktok.com/@wellymi7",
-                "BLUESKY" : "https://bsky.app/profile/bwelly.bsky.social",
-            }
-
-            SOCIALMEDIAS["INSTAGRAM"].click(function(){
-                open_url(LINKS["INSTAGRAM"]);
-            })
-
-            SOCIALMEDIAS["TWITTER/X"].click(function(){
-                open_url(LINKS["TWITTER/X"]);
-            })
-
-            SOCIALMEDIAS["TIKTOK"].click(function(){
-                open_url(LINKS["TIKTOK"]);
-            })
-
-            SOCIALMEDIAS["BLUESKY"].click(function(){
-                open_url(LINKS["BLUESKY"]);
-            })
-
-        })
-
-    </script>
+    <script src="script.js"></script>
 
 </html>
