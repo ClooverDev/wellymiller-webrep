@@ -83,9 +83,11 @@
 
             .BOOK-CHILD {
                 width: 200px;
-                margin-right: -80px;
+                margin-right: -120px;
                 margin-left: 0;
                 transition: .15s ease;
+                filter: drop-shadow(-5px 5px 10px black);
+                transform: rotateY(50deg);
             }
 
             .BOOK-CHILD:hover {
@@ -94,6 +96,8 @@
                 margin-left: 10px;
 
                 filter: drop-shadow(0 0 10px gold);
+
+                transform: rotateY(0) rotate(-5deg);
             }
 
             .BOOK-CHILD-SOLO {
@@ -125,7 +129,7 @@
             .SM-CHILD:hover {
                 filter: drop-shadow(0 0 10px rgb(31, 31, 31));
                 cursor: pointer;
-                transform: scale(1.08) rotate(5deg);
+                transform: scale(1.08) translateY(-10px) rotateY(-35deg);
             }
 
             .SM-CHILD:active {
@@ -144,7 +148,7 @@
                 }
             }
 
-            @media (max-width: 750px) {
+            @media (max-width: 550px) {
                 .BOOK-CHILD {
                     width: 150px;
                 }
@@ -256,7 +260,7 @@
 
             </div>
 
-            <footer class='container-fluid w-100 d-flex justify-content-center fixed-bottom' style="align-items: center; background-color: rgb(34, 34, 34); border-top: 10px solid rgb(22, 22, 22)">
+            <footer class='container-fluid w-100 d-flex justify-content-center fixed-bottom' style="align-items: center; background-color: rgb(34, 34, 34); border-top: 10px solid rgb(22, 22, 22);">
 
                 <div class="container-fluid w-100 d-flex justify-content-center" style="transform: translateY(-20px)">
 
