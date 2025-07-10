@@ -126,10 +126,23 @@ h3, h1 {
     background-color: rgba(41, 41, 41, 0.75);
 }
 
+.tip-mob {
+    display: none;
+}
+
+.tip-deto {
+    display: block;
+}
+
+footer {
+    height: 50px;
+}
+
+.sm-div {
+    transform: translateY(-18px)
+}
+
 @media (max-width: 550px) {
-    .BOOK-CHILD {
-        width: 150px;
-    }
 
     .BACKGROUND {
         margin-left: -100px;
@@ -138,5 +151,36 @@ h3, h1 {
 
     .BIO {
         width: 100%;
+    }
+
+    .BOOK-CHILD {
+        width: 155px;
+        margin-right: -95px;
+        margin-left: 0;
+        transition: .15s ease;
+        filter: drop-shadow(-5px 5px 10px black);
+        transform: rotateY(45deg);
+    }
+
+    .BOOK-CHILD:hover {
+        cursor: pointer;
+        margin-right: 5px;
+        margin-left: 5px;
+
+        filter: drop-shadow(0 0 10px gold);
+
+        transform: rotateY(0) rotate(-5deg);
+    }
+
+    .tip-mob {
+        display: block;
+    }
+
+    .tip-deto {
+        display: none;
+    }
+
+    .sm-div {
+        transform: translateY(-15px);
     }
 }
