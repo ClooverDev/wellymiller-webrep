@@ -3,6 +3,7 @@ $(document).ready(function(){
     const BOOKS = {
         "A QUARTA PAREDE" : $("#BOOK_AQUARTAPAREDE"),
         "A DIMENSÃO DO VIDRO" : $("#BOOK_ADIMENSAODOVIDRO"),
+        "A DIMENSÃO DO VIDRO - PB" : $("#BOOK_ADIMENSAODOVIDRO-PB"),
         "CONTRA-PAREDE" : $("#BOOK_CONTRAPAREDE"),
         "A MINHA NOITE ESTRELADA" : $("#BOOK_MINHANOITEESTRELADA")
     }
@@ -36,6 +37,10 @@ $(document).ready(function(){
 
     BOOKS["A DIMENSÃO DO VIDRO"].click(function(){
         open_book("adimensaodovidro", false);
+    })
+
+    BOOKS["A DIMENSÃO DO VIDRO - PB"].click(function(){
+        open_book("adimensaodovidro", true);
     })
 
     BOOKS["CONTRA-PAREDE"].click(function(){
