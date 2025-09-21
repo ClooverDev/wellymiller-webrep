@@ -5,7 +5,8 @@ $(document).ready(function(){
         "A DIMENSÃO DO VIDRO" : $("#BOOK_ADIMENSAODOVIDRO"),
         "A DIMENSÃO DO VIDRO - PB" : $("#BOOK_ADIMENSAODOVIDRO-PB"),
         "CONTRA-PAREDE" : $("#BOOK_CONTRAPAREDE"),
-        "A MINHA NOITE ESTRELADA" : $("#BOOK_MINHANOITEESTRELADA")
+        "A MINHA NOITE ESTRELADA" : $("#BOOK_MINHANOITEESTRELADA"),
+        "RAINHA VALKYRJA" : $("#COMPRAR-AGORA"),
     }
 
     const hostname = window.location.hostname;
@@ -49,6 +50,10 @@ $(document).ready(function(){
 
     BOOKS["A MINHA NOITE ESTRELADA"].click(function(){
         open_book("aminhanoiteestrelada", false);
+    })
+
+    BOOKS["RAINHA VALKYRJA"].click(function(){
+        open_book("rainhavalkyrja", false)
     })
 
     //////////////////////////////////////////////////////////////////////////////////////
